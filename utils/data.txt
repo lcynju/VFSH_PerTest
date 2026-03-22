@@ -1,0 +1,897 @@
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+重新测试按钮点击
+QWindowsWindow::setGeometry: Unable to set geometry 2880x1691+0+45 (frame: 2906x1762-13-13) on QWidgetWindow/"MainWindowClassWindow" on "\\.\DISPLAY1". Resulting geometry: 2880x1675+0+45 (frame: 2906x1746-13-13) margins: 13, 58, 13, 13 minimum size: 729x1691 MINMAXINFO maxSize=0,0 maxpos=0,0 mintrack=755,1762 maxtrack=0,0)
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143315358800CC\r\n', 'distance': 5429, 'force': 5171, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+记录x初始值: 50.7444
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306144215358800BD\r\n', 'distance': 5429, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306144215358800BD\r\n', 'distance': 5429, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306144215358800BD\r\n', 'distance': 5429, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306144215358800BD\r\n', 'distance': 5429, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306144215358800BD\r\n', 'distance': 5429, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143315358800CC\r\n', 'distance': 5429, 'force': 5171, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306144215358800BD\r\n', 'distance': 5429, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+工作载荷 changed: 4
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+工作载荷 changed: 43
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+工作载荷 changed: 431
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306144215358800BD\r\n', 'distance': 5429, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+工作载荷 changed: 4317
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+工作载荷 changed: 43179
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306144215358800BD\r\n', 'distance': 5429, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+拔销值 changed: 50.784
+记录拔销值: 50.78360000000001
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143315358800CC\r\n', 'distance': 5429, 'force': 5171, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143315358800CC\r\n', 'distance': 5429, 'force': 5171, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143715358800C8\r\n', 'distance': 5429, 'force': 5175, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143A15358800C5\r\n', 'distance': 5429, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15358800C1\r\n', 'distance': 5429, 'force': 5182, 'status': 34816}
+记录x初始值: 50.78360000000001
+{'raw': ':02100000000306143E15368800C0\r\n', 'distance': 5430, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143A15368800C4\r\n', 'distance': 5430, 'force': 5178, 'status': 34816}
+{'raw': ':02100000000306143E15378800BF\r\n', 'distance': 5431, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306143E15378800BF\r\n', 'distance': 5431, 'force': 5182, 'status': 34816}
+{'raw': ':02100000000306144215388800BA\r\n', 'distance': 5432, 'force': 5186, 'status': 34816}
+{'raw': ':02100000000306144215388800BA\r\n', 'distance': 5432, 'force': 5186, 'status': 34816}
+{'raw': ':0210000000030614631539880098\r\n', 'distance': 5433, 'force': 5219, 'status': 34816}
+{'raw': ':02100000000306159C153988005E\r\n', 'distance': 5433, 'force': 5532, 'status': 34816}
+{'raw': ':0210000000030617C4153A880033\r\n', 'distance': 5434, 'force': 6084, 'status': 34816}
+{'raw': ':021000000003061A23153A8800D1\r\n', 'distance': 5434, 'force': 6691, 'status': 34816}
+{'raw': ':021000000003061C78153B880079\r\n', 'distance': 5435, 'force': 7288, 'status': 34816}
+{'raw': ':021000000003061E94153B88005B\r\n', 'distance': 5435, 'force': 7828, 'status': 34816}
+{'raw': ':021000000003062039153C8800B3\r\n', 'distance': 5436, 'force': 8249, 'status': 34816}
+{'raw': ':02100000000306212C153C8800BF\r\n', 'distance': 5436, 'force': 8492, 'status': 34816}
+{'raw': ':0210000000030621BD153D88002D\r\n', 'distance': 5437, 'force': 8637, 'status': 34816}
+{'raw': ':021000000003062229153D8800C0\r\n', 'distance': 5437, 'force': 8745, 'status': 34816}
+{'raw': ':021000000003062282153E880066\r\n', 'distance': 5438, 'force': 8834, 'status': 34816}
+{'raw': ':0210000000030622C9153E88001F\r\n', 'distance': 5438, 'force': 8905, 'status': 34816}
+{'raw': ':021000000003062339153F8800AD\r\n', 'distance': 5439, 'force': 9017, 'status': 34816}
+{'raw': ':021000000003062375153F880071\r\n', 'distance': 5439, 'force': 9077, 'status': 34816}
+{'raw': ':0210000000030623A1153F880045\r\n', 'distance': 5439, 'force': 9121, 'status': 34816}
+{'raw': ':0210000000030623BF1540880026\r\n', 'distance': 5440, 'force': 9151, 'status': 34816}
+{'raw': ':0210000000030623D21540880013\r\n', 'distance': 5440, 'force': 9170, 'status': 34816}
+{'raw': ':0210000000030623E815418800FC\r\n', 'distance': 5441, 'force': 9192, 'status': 34816}
+{'raw': ':0210000000030623E11541880003\r\n', 'distance': 5441, 'force': 9185, 'status': 34816}
+{'raw': ':0210000000030623DD1541880007\r\n', 'distance': 5441, 'force': 9181, 'status': 34816}
+{'raw': ':0210000000030623D9154188000B\r\n', 'distance': 5441, 'force': 9177, 'status': 34816}
+{'raw': ':0210000000030623D9154188000B\r\n', 'distance': 5441, 'force': 9177, 'status': 34816}
+{'raw': ':0210000000030623F015418800F4\r\n', 'distance': 5441, 'force': 9200, 'status': 34816}
+{'raw': ':02100000000306241915418800CA\r\n', 'distance': 5441, 'force': 9241, 'status': 34816}
+{'raw': ':02100000000306242F15428800B3\r\n', 'distance': 5442, 'force': 9263, 'status': 34816}
+{'raw': ':02100000000306243E15428800A4\r\n', 'distance': 5442, 'force': 9278, 'status': 34816}
+{'raw': ':021000000003062445154388009C\r\n', 'distance': 5443, 'force': 9285, 'status': 34816}
+{'raw': ':0210000000030624491543880098\r\n', 'distance': 5443, 'force': 9289, 'status': 34816}
+{'raw': ':0210000000030624511543880090\r\n', 'distance': 5443, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306245F1544880081\r\n', 'distance': 5444, 'force': 9311, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062445154488009B\r\n', 'distance': 5444, 'force': 9285, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':021000000003062445154488009B\r\n', 'distance': 5444, 'force': 9285, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+拔销值 changed: 91.032
+记录拔销值: 91.03220000000002
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062445154488009B\r\n', 'distance': 5444, 'force': 9285, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':021000000003062445154488009B\r\n', 'distance': 5444, 'force': 9285, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062445154488009B\r\n', 'distance': 5444, 'force': 9285, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+工作位移 changed: 1
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+工作位移 changed: 10
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+工作位移 changed: 100
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':0210000000030624491544880097\r\n', 'distance': 5444, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306244D1544880093\r\n', 'distance': 5444, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':0210000000030624581544880088\r\n', 'distance': 5444, 'force': 9304, 'status': 34816}
+{'raw': ':0210000000030624581544880088\r\n', 'distance': 5444, 'force': 9304, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+开始按钮被点击
+试验时间 changed: 2025-09-24 17:55:38
+载荷 43179
+开始发送数据
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+设置偏移量: 5344，使第一个点显示在100的位置
+{'raw': ':021000000003062451154488008F\r\n', 'distance': 5444, 'force': 9297, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':0210000000030624581544880088\r\n', 'distance': 5444, 'force': 9304, 'status': 34816}
+{'raw': ':0210000000030624581544880088\r\n', 'distance': 5444, 'force': 9304, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':02100000000306245C1544880084\r\n', 'distance': 5444, 'force': 9308, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454154488008C\r\n', 'distance': 5444, 'force': 9300, 'status': 34816}
+{'raw': ':02100000000306245C1544880084\r\n', 'distance': 5444, 'force': 9308, 'status': 34816}
+{'raw': ':021000000003062454154588008B\r\n', 'distance': 5445, 'force': 9300, 'status': 34816}
+{'raw': ':0210000000030624491545880096\r\n', 'distance': 5445, 'force': 9289, 'status': 34816}
+{'raw': ':0210000000030624451546880099\r\n', 'distance': 5446, 'force': 9285, 'status': 34816}
+{'raw': ':021000000003062442154688009C\r\n', 'distance': 5446, 'force': 9282, 'status': 34816}
+{'raw': ':02100000000306243E15468800A0\r\n', 'distance': 5446, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306243615478800A7\r\n', 'distance': 5447, 'force': 9270, 'status': 34816}
+{'raw': ':02100000000306242B15478800B2\r\n', 'distance': 5447, 'force': 9259, 'status': 34816}
+{'raw': ':02100000000306242B15488800B1\r\n', 'distance': 5448, 'force': 9259, 'status': 34816}
+{'raw': ':02100000000306242B15488800B1\r\n', 'distance': 5448, 'force': 9259, 'status': 34816}
+{'raw': ':02100000000306241915488800C3\r\n', 'distance': 5448, 'force': 9241, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':02100000000306240615498800D5\r\n', 'distance': 5449, 'force': 9222, 'status': 34816}
+{'raw': ':02100000000306240215498800D9\r\n', 'distance': 5449, 'force': 9218, 'status': 34816}
+{'raw': ':02100000000306240D154A8800CD\r\n', 'distance': 5450, 'force': 9229, 'status': 34816}
+{'raw': ':021000000003062419154A8800C1\r\n', 'distance': 5450, 'force': 9241, 'status': 34816}
+{'raw': ':02100000000306242F154A8800AB\r\n', 'distance': 5450, 'force': 9263, 'status': 34816}
+{'raw': ':02100000000306243A154B88009F\r\n', 'distance': 5451, 'force': 9274, 'status': 34816}
+{'raw': ':02100000000306243A154B88009F\r\n', 'distance': 5451, 'force': 9274, 'status': 34816}
+{'raw': ':021000000003062436154C8800A2\r\n', 'distance': 5452, 'force': 9270, 'status': 34816}
+{'raw': ':02100000000306243E154C88009A\r\n', 'distance': 5452, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306243E154C88009A\r\n', 'distance': 5452, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306243E154D880099\r\n', 'distance': 5453, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306243A154D88009D\r\n', 'distance': 5453, 'force': 9274, 'status': 34816}
+{'raw': ':021000000003062436154E8800A0\r\n', 'distance': 5454, 'force': 9270, 'status': 34816}
+{'raw': ':02100000000306242B154E8800AB\r\n', 'distance': 5454, 'force': 9259, 'status': 34816}
+{'raw': ':021000000003062428154E8800AE\r\n', 'distance': 5454, 'force': 9256, 'status': 34816}
+{'raw': ':02100000000306241C154F8800B9\r\n', 'distance': 5455, 'force': 9244, 'status': 34816}
+{'raw': ':021000000003062419154F8800BC\r\n', 'distance': 5455, 'force': 9241, 'status': 34816}
+{'raw': ':021000000003062415154F8800C0\r\n', 'distance': 5455, 'force': 9237, 'status': 34816}
+{'raw': ':02100000000306240A15508800CA\r\n', 'distance': 5456, 'force': 9226, 'status': 34816}
+{'raw': ':0210000000030623FF15508800D6\r\n', 'distance': 5456, 'force': 9215, 'status': 34816}
+{'raw': ':0210000000030623F315518800E1\r\n', 'distance': 5457, 'force': 9203, 'status': 34816}
+{'raw': ':0210000000030623EC15518800E8\r\n', 'distance': 5457, 'force': 9196, 'status': 34816}
+{'raw': ':0210000000030623FB15518800D9\r\n', 'distance': 5457, 'force': 9211, 'status': 34816}
+{'raw': ':02100000000306240615528800CC\r\n', 'distance': 5458, 'force': 9222, 'status': 34816}
+{'raw': ':02100000000306241515528800BD\r\n', 'distance': 5458, 'force': 9237, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':02100000000306242415538800AD\r\n', 'distance': 5459, 'force': 9252, 'status': 34816}
+{'raw': ':02100000000306242F15538800A2\r\n', 'distance': 5459, 'force': 9263, 'status': 34816}
+{'raw': ':021000000003062433155388009E\r\n', 'distance': 5459, 'force': 9267, 'status': 34816}
+{'raw': ':02100000000306242F15548800A1\r\n', 'distance': 5460, 'force': 9263, 'status': 34816}
+{'raw': ':02100000000306242B15548800A5\r\n', 'distance': 5460, 'force': 9259, 'status': 34816}
+{'raw': ':02100000000306242F15558800A0\r\n', 'distance': 5461, 'force': 9263, 'status': 34816}
+{'raw': ':02100000000306242F15558800A0\r\n', 'distance': 5461, 'force': 9263, 'status': 34816}
+{'raw': ':02100000000306242815558800A7\r\n', 'distance': 5461, 'force': 9256, 'status': 34816}
+{'raw': ':02100000000306241915568800B5\r\n', 'distance': 5462, 'force': 9241, 'status': 34816}
+{'raw': ':02100000000306241115568800BD\r\n', 'distance': 5462, 'force': 9233, 'status': 34816}
+{'raw': ':02100000000306240615568800C8\r\n', 'distance': 5462, 'force': 9222, 'status': 34816}
+{'raw': ':02100000000306240615578800C7\r\n', 'distance': 5463, 'force': 9222, 'status': 34816}
+{'raw': ':02100000000306241115578800BC\r\n', 'distance': 5463, 'force': 9233, 'status': 34816}
+{'raw': ':02100000000306242815588800A4\r\n', 'distance': 5464, 'force': 9256, 'status': 34816}
+{'raw': ':02100000000306243A1558880092\r\n', 'distance': 5464, 'force': 9274, 'status': 34816}
+{'raw': ':02100000000306244D155888007F\r\n', 'distance': 5464, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306245C155988006F\r\n', 'distance': 5465, 'force': 9308, 'status': 34816}
+{'raw': ':0210000000030624631559880068\r\n', 'distance': 5465, 'force': 9315, 'status': 34816}
+{'raw': ':02100000000306245C155A88006E\r\n', 'distance': 5466, 'force': 9308, 'status': 34816}
+{'raw': ':021000000003062454155A880076\r\n', 'distance': 5466, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062445155A880085\r\n', 'distance': 5466, 'force': 9285, 'status': 34816}
+{'raw': ':021000000003062433155B880096\r\n', 'distance': 5467, 'force': 9267, 'status': 34816}
+{'raw': ':021000000003062428155B8800A1\r\n', 'distance': 5467, 'force': 9256, 'status': 34816}
+{'raw': ':021000000003062415155C8800B3\r\n', 'distance': 5468, 'force': 9237, 'status': 34816}
+{'raw': ':02100000000306241C155C8800AC\r\n', 'distance': 5468, 'force': 9244, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':021000000003062420155C8800A8\r\n', 'distance': 5468, 'force': 9248, 'status': 34816}
+{'raw': ':021000000003062424155D8800A3\r\n', 'distance': 5469, 'force': 9252, 'status': 34816}
+{'raw': ':02100000000306242F155D880098\r\n', 'distance': 5469, 'force': 9263, 'status': 34816}
+{'raw': ':02100000000306243E155D880089\r\n', 'distance': 5469, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306244D155E880079\r\n', 'distance': 5470, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306245C155E88006A\r\n', 'distance': 5470, 'force': 9308, 'status': 34816}
+{'raw': ':02100000000306246B155F88005A\r\n', 'distance': 5471, 'force': 9323, 'status': 34816}
+{'raw': ':02100000000306246E155F880057\r\n', 'distance': 5471, 'force': 9326, 'status': 34816}
+{'raw': ':02100000000306246B155F88005A\r\n', 'distance': 5471, 'force': 9323, 'status': 34816}
+{'raw': ':02100000000306245F1560880065\r\n', 'distance': 5472, 'force': 9311, 'status': 34816}
+{'raw': ':021000000003062458156088006C\r\n', 'distance': 5472, 'force': 9304, 'status': 34816}
+{'raw': ':02100000000306244D1561880076\r\n', 'distance': 5473, 'force': 9293, 'status': 34816}
+{'raw': ':021000000003062445156188007E\r\n', 'distance': 5473, 'force': 9285, 'status': 34816}
+{'raw': ':021000000003062449156188007A\r\n', 'distance': 5473, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306244D1562880075\r\n', 'distance': 5474, 'force': 9293, 'status': 34816}
+{'raw': ':0210000000030624491562880079\r\n', 'distance': 5474, 'force': 9289, 'status': 34816}
+{'raw': ':0210000000030624491563880078\r\n', 'distance': 5475, 'force': 9289, 'status': 34816}
+{'raw': ':02100000000306243E1563880083\r\n', 'distance': 5475, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306243A1563880087\r\n', 'distance': 5475, 'force': 9274, 'status': 34816}
+{'raw': ':02100000000306243A1564880086\r\n', 'distance': 5476, 'force': 9274, 'status': 34816}
+{'raw': ':021000000003062436156488008A\r\n', 'distance': 5476, 'force': 9270, 'status': 34816}
+{'raw': ':02100000000306243E1564880082\r\n', 'distance': 5476, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306243E1565880081\r\n', 'distance': 5477, 'force': 9278, 'status': 34816}
+{'raw': ':021000000003062445156588007A\r\n', 'distance': 5477, 'force': 9285, 'status': 34816}
+{'raw': ':02100000000306244D1566880071\r\n', 'distance': 5478, 'force': 9293, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':021000000003062451156688006D\r\n', 'distance': 5478, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306245C1566880062\r\n', 'distance': 5478, 'force': 9308, 'status': 34816}
+{'raw': ':0210000000030624581567880065\r\n', 'distance': 5479, 'force': 9304, 'status': 34816}
+{'raw': ':02100000000306244D1567880070\r\n', 'distance': 5479, 'force': 9293, 'status': 34816}
+{'raw': ':02100000000306243A1568880082\r\n', 'distance': 5480, 'force': 9274, 'status': 34816}
+{'raw': ':02100000000306242F156888008D\r\n', 'distance': 5480, 'force': 9263, 'status': 34816}
+{'raw': ':0210000000030624281568880094\r\n', 'distance': 5480, 'force': 9256, 'status': 34816}
+{'raw': ':02100000000306241C156988009F\r\n', 'distance': 5481, 'force': 9244, 'status': 34816}
+{'raw': ':02100000000306241915698800A2\r\n', 'distance': 5481, 'force': 9241, 'status': 34816}
+{'raw': ':021000000003062420156A88009A\r\n', 'distance': 5482, 'force': 9248, 'status': 34816}
+{'raw': ':02100000000306242B156A88008F\r\n', 'distance': 5482, 'force': 9259, 'status': 34816}
+{'raw': ':02100000000306242B156A88008F\r\n', 'distance': 5482, 'force': 9259, 'status': 34816}
+{'raw': ':02100000000306242B156B88008E\r\n', 'distance': 5483, 'force': 9259, 'status': 34816}
+{'raw': ':02100000000306242B156B88008E\r\n', 'distance': 5483, 'force': 9259, 'status': 34816}
+{'raw': ':021000000003062433156C880085\r\n', 'distance': 5484, 'force': 9267, 'status': 34816}
+{'raw': ':021000000003062436156C880082\r\n', 'distance': 5484, 'force': 9270, 'status': 34816}
+{'raw': ':021000000003062442156C880076\r\n', 'distance': 5484, 'force': 9282, 'status': 34816}
+{'raw': ':021000000003062449156D88006E\r\n', 'distance': 5485, 'force': 9289, 'status': 34816}
+{'raw': ':021000000003062454156D880063\r\n', 'distance': 5485, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454156D880063\r\n', 'distance': 5485, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454156E880062\r\n', 'distance': 5486, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454156E880062\r\n', 'distance': 5486, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062458156F88005D\r\n', 'distance': 5487, 'force': 9304, 'status': 34816}
+{'raw': ':02100000000306245F156F880056\r\n', 'distance': 5487, 'force': 9311, 'status': 34816}
+{'raw': ':02100000000306246E156F880047\r\n', 'distance': 5487, 'force': 9326, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':021000000003062476157088003E\r\n', 'distance': 5488, 'force': 9334, 'status': 34816}
+{'raw': ':02100000000306247A157088003A\r\n', 'distance': 5488, 'force': 9338, 'status': 34816}
+{'raw': ':02100000000306247A1571880039\r\n', 'distance': 5489, 'force': 9338, 'status': 34816}
+{'raw': ':021000000003062476157188003D\r\n', 'distance': 5489, 'force': 9334, 'status': 34816}
+{'raw': ':0210000000030624721571880041\r\n', 'distance': 5489, 'force': 9330, 'status': 34816}
+{'raw': ':0210000000030624721572880040\r\n', 'distance': 5490, 'force': 9330, 'status': 34816}
+{'raw': ':0210000000030624721572880040\r\n', 'distance': 5490, 'force': 9330, 'status': 34816}
+{'raw': ':021000000003062472157388003F\r\n', 'distance': 5491, 'force': 9330, 'status': 34816}
+{'raw': ':02100000000306247A1573880037\r\n', 'distance': 5491, 'force': 9338, 'status': 34816}
+{'raw': ':021000000003062472157388003F\r\n', 'distance': 5491, 'force': 9330, 'status': 34816}
+{'raw': ':02100000000306246E1573880043\r\n', 'distance': 5491, 'force': 9326, 'status': 34816}
+{'raw': ':02100000000306246B1573880046\r\n', 'distance': 5491, 'force': 9323, 'status': 34816}
+{'raw': ':02100000000306246B1573880046\r\n', 'distance': 5491, 'force': 9323, 'status': 34816}
+{'raw': ':021000000003062463157388004E\r\n', 'distance': 5491, 'force': 9315, 'status': 34816}
+{'raw': ':021000000003062467157388004A\r\n', 'distance': 5491, 'force': 9319, 'status': 34816}
+{'raw': ':021000000003062485157388002C\r\n', 'distance': 5491, 'force': 9349, 'status': 34816}
+{'raw': ':021000000003062481157488002F\r\n', 'distance': 5492, 'force': 9345, 'status': 34816}
+{'raw': ':02100000000306247D1574880033\r\n', 'distance': 5492, 'force': 9341, 'status': 34816}
+{'raw': ':0210000000030624761575880039\r\n', 'distance': 5493, 'force': 9334, 'status': 34816}
+{'raw': ':0210000000030624761575880039\r\n', 'distance': 5493, 'force': 9334, 'status': 34816}
+{'raw': ':021000000003062472157588003D\r\n', 'distance': 5493, 'force': 9330, 'status': 34816}
+{'raw': ':021000000003062472157688003C\r\n', 'distance': 5494, 'force': 9330, 'status': 34816}
+{'raw': ':0210000000030624761576880038\r\n', 'distance': 5494, 'force': 9334, 'status': 34816}
+{'raw': ':02100000000306247A1577880033\r\n', 'distance': 5495, 'force': 9338, 'status': 34816}
+{'raw': ':02100000000306247D1577880030\r\n', 'distance': 5495, 'force': 9341, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':0210000000030624851577880028\r\n', 'distance': 5495, 'force': 9349, 'status': 34816}
+{'raw': ':02100000000306248C1578880020\r\n', 'distance': 5496, 'force': 9356, 'status': 34816}
+{'raw': ':0210000000030624941578880018\r\n', 'distance': 5496, 'force': 9364, 'status': 34816}
+{'raw': ':0210000000030624941579880017\r\n', 'distance': 5497, 'force': 9364, 'status': 34816}
+{'raw': ':0210000000030624941579880017\r\n', 'distance': 5497, 'force': 9364, 'status': 34816}
+{'raw': ':021000000003062490157988001B\r\n', 'distance': 5497, 'force': 9360, 'status': 34816}
+{'raw': ':021000000003062485157A880025\r\n', 'distance': 5498, 'force': 9349, 'status': 34816}
+{'raw': ':021000000003062472157A880038\r\n', 'distance': 5498, 'force': 9330, 'status': 34816}
+{'raw': ':02100000000306246E157B88003B\r\n', 'distance': 5499, 'force': 9326, 'status': 34816}
+{'raw': ':021000000003062467157B880042\r\n', 'distance': 5499, 'force': 9319, 'status': 34816}
+{'raw': ':021000000003062463157B880046\r\n', 'distance': 5499, 'force': 9315, 'status': 34816}
+{'raw': ':021000000003062463157C880045\r\n', 'distance': 5500, 'force': 9315, 'status': 34816}
+{'raw': ':02100000000306246B157C88003D\r\n', 'distance': 5500, 'force': 9323, 'status': 34816}
+{'raw': ':02100000000306246E157C88003A\r\n', 'distance': 5500, 'force': 9326, 'status': 34816}
+{'raw': ':02100000000306246B157D88003C\r\n', 'distance': 5501, 'force': 9323, 'status': 34816}
+{'raw': ':02100000000306245F157D880048\r\n', 'distance': 5501, 'force': 9311, 'status': 34816}
+{'raw': ':02100000000306245F157E880047\r\n', 'distance': 5502, 'force': 9311, 'status': 34816}
+{'raw': ':021000000003062458157E88004E\r\n', 'distance': 5502, 'force': 9304, 'status': 34816}
+{'raw': ':021000000003062454157E880052\r\n', 'distance': 5502, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062454157F880051\r\n', 'distance': 5503, 'force': 9300, 'status': 34816}
+{'raw': ':021000000003062451157F880054\r\n', 'distance': 5503, 'force': 9297, 'status': 34816}
+{'raw': ':0210000000030624541580880050\r\n', 'distance': 5504, 'force': 9300, 'status': 34816}
+{'raw': ':02100000000306245F1580880045\r\n', 'distance': 5504, 'force': 9311, 'status': 34816}
+{'raw': ':021000000003062467158088003D\r\n', 'distance': 5504, 'force': 9319, 'status': 34816}
+{'raw': ':02100000000306245C1581880047\r\n', 'distance': 5505, 'force': 9308, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':0210000000030624511581880052\r\n', 'distance': 5505, 'force': 9297, 'status': 34816}
+{'raw': ':02100000000306243E1582880064\r\n', 'distance': 5506, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306242B1582880077\r\n', 'distance': 5506, 'force': 9259, 'status': 34816}
+{'raw': ':021000000003062424158288007E\r\n', 'distance': 5506, 'force': 9252, 'status': 34816}
+{'raw': ':021000000003062428158288007A\r\n', 'distance': 5506, 'force': 9256, 'status': 34816}
+{'raw': ':02100000000306242B1582880077\r\n', 'distance': 5506, 'force': 9259, 'status': 34816}
+{'raw': ':0210000000030624201582880082\r\n', 'distance': 5506, 'force': 9248, 'status': 34816}
+{'raw': ':02100000000306240D1583880094\r\n', 'distance': 5507, 'force': 9229, 'status': 34816}
+{'raw': ':021000000003062406158388009B\r\n', 'distance': 5507, 'force': 9222, 'status': 34816}
+{'raw': ':0210000000030623FB15848800A6\r\n', 'distance': 5508, 'force': 9211, 'status': 34816}
+{'raw': ':0210000000030623F715848800AA\r\n', 'distance': 5508, 'force': 9207, 'status': 34816}
+{'raw': ':0210000000030623E415848800BD\r\n', 'distance': 5508, 'force': 9188, 'status': 34816}
+{'raw': ':0210000000030623C715858800D9\r\n', 'distance': 5509, 'force': 9159, 'status': 34816}
+{'raw': ':0210000000030623B415858800EC\r\n', 'distance': 5509, 'force': 9140, 'status': 34816}
+{'raw': ':0210000000030623A115868800FE\r\n', 'distance': 5510, 'force': 9121, 'status': 34816}
+{'raw': ':02100000000306239A1586880005\r\n', 'distance': 5510, 'force': 9114, 'status': 34816}
+{'raw': ':0210000000030623961586880009\r\n', 'distance': 5510, 'force': 9110, 'status': 34816}
+{'raw': ':021000000003062392158788000C\r\n', 'distance': 5511, 'force': 9106, 'status': 34816}
+{'raw': ':02100000000306238B1587880013\r\n', 'distance': 5511, 'force': 9099, 'status': 34816}
+{'raw': ':02100000000306237C1588880021\r\n', 'distance': 5512, 'force': 9084, 'status': 34816}
+{'raw': ':02100000000306237C1588880021\r\n', 'distance': 5512, 'force': 9084, 'status': 34816}
+{'raw': ':021000000003062380158888001D\r\n', 'distance': 5512, 'force': 9088, 'status': 34816}
+{'raw': ':02100000000306238B1589880011\r\n', 'distance': 5513, 'force': 9099, 'status': 34816}
+{'raw': ':02100000000306239E15898800FE\r\n', 'distance': 5513, 'force': 9118, 'status': 34816}
+{'raw': ':0210000000030623B0158A8800EB\r\n', 'distance': 5514, 'force': 9136, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':0210000000030623BB158A8800E0\r\n', 'distance': 5514, 'force': 9147, 'status': 34816}
+{'raw': ':0210000000030623CA158A8800D1\r\n', 'distance': 5514, 'force': 9162, 'status': 34816}
+{'raw': ':0210000000030623D6158B8800C4\r\n', 'distance': 5515, 'force': 9174, 'status': 34816}
+{'raw': ':0210000000030623E8158B8800B2\r\n', 'distance': 5515, 'force': 9192, 'status': 34816}
+{'raw': ':0210000000030623F7158B8800A3\r\n', 'distance': 5515, 'force': 9207, 'status': 34816}
+{'raw': ':02100000000306240A158C88008E\r\n', 'distance': 5516, 'force': 9226, 'status': 34816}
+{'raw': ':02100000000306240D158C88008B\r\n', 'distance': 5516, 'force': 9229, 'status': 34816}
+{'raw': ':02100000000306240D158D88008A\r\n', 'distance': 5517, 'force': 9229, 'status': 34816}
+{'raw': ':021000000003062419158D88007E\r\n', 'distance': 5517, 'force': 9241, 'status': 34816}
+{'raw': ':021000000003062420158D880077\r\n', 'distance': 5517, 'force': 9248, 'status': 34816}
+{'raw': ':021000000003062428158E88006E\r\n', 'distance': 5518, 'force': 9256, 'status': 34816}
+{'raw': ':021000000003062436158E880060\r\n', 'distance': 5518, 'force': 9270, 'status': 34816}
+{'raw': ':02100000000306243A158F88005B\r\n', 'distance': 5519, 'force': 9274, 'status': 34816}
+{'raw': ':021000000003062442158F880053\r\n', 'distance': 5519, 'force': 9282, 'status': 34816}
+{'raw': ':02100000000306243E158F880057\r\n', 'distance': 5519, 'force': 9278, 'status': 34816}
+{'raw': ':02100000000306243E1590880056\r\n', 'distance': 5520, 'force': 9278, 'status': 34816}
+{'raw': ':021000000003062449159088004B\r\n', 'distance': 5520, 'force': 9289, 'status': 34816}
+{'raw': ':021000000003062458159188003B\r\n', 'distance': 5521, 'force': 9304, 'status': 34816}
+{'raw': ':0210000000030624631591880030\r\n', 'distance': 5521, 'force': 9315, 'status': 34816}
+{'raw': ':02100000000306246B1591880028\r\n', 'distance': 5521, 'force': 9323, 'status': 34816}
+{'raw': ':02100000000306246B1592880027\r\n', 'distance': 5522, 'force': 9323, 'status': 34816}
+{'raw': ':0210000000030624721592880020\r\n', 'distance': 5522, 'force': 9330, 'status': 34816}
+{'raw': ':021000000003062476159388001B\r\n', 'distance': 5523, 'force': 9334, 'status': 34816}
+{'raw': ':021000000003062472159388001F\r\n', 'distance': 5523, 'force': 9330, 'status': 34816}
+{'raw': ':02100000000306246E1593880023\r\n', 'distance': 5523, 'force': 9326, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':02100000000306246B1594880025\r\n', 'distance': 5524, 'force': 9323, 'status': 34816}
+{'raw': ':0210000000030624671594880029\r\n', 'distance': 5524, 'force': 9319, 'status': 34816}
+{'raw': ':0210000000030624671595880028\r\n', 'distance': 5525, 'force': 9319, 'status': 34816}
+{'raw': ':021000000003062472159588001D\r\n', 'distance': 5525, 'force': 9330, 'status': 34816}
+{'raw': ':021000000003062481159588000E\r\n', 'distance': 5525, 'force': 9345, 'status': 34816}
+{'raw': ':02100000000306248C1596880002\r\n', 'distance': 5526, 'force': 9356, 'status': 34816}
+{'raw': ':0210000000030624881596880006\r\n', 'distance': 5526, 'force': 9352, 'status': 34816}
+{'raw': ':02100000000306248C1596880002\r\n', 'distance': 5526, 'force': 9356, 'status': 34816}
+{'raw': ':02100000000306248C1597880001\r\n', 'distance': 5527, 'force': 9356, 'status': 34816}
+{'raw': ':02100000000306249015978800FD\r\n', 'distance': 5527, 'force': 9360, 'status': 34816}
+{'raw': ':02100000000306248C1598880000\r\n', 'distance': 5528, 'force': 9356, 'status': 34816}
+{'raw': ':0210000000030624881598880004\r\n', 'distance': 5528, 'force': 9352, 'status': 34816}
+{'raw': ':021000000003062481159888000B\r\n', 'distance': 5528, 'force': 9345, 'status': 34816}
+{'raw': ':02100000000306247D159988000E\r\n', 'distance': 5529, 'force': 9341, 'status': 34816}
+{'raw': ':02100000000306247A1599880011\r\n', 'distance': 5529, 'force': 9338, 'status': 34816}
+{'raw': ':021000000003062476159A880014\r\n', 'distance': 5530, 'force': 9334, 'status': 34816}
+{'raw': ':021000000003062490159A8800FA\r\n', 'distance': 5530, 'force': 9360, 'status': 34816}
+{'raw': ':021000000003062497159A8800F3\r\n', 'distance': 5530, 'force': 9367, 'status': 34816}
+{'raw': ':02100000000306249B159B8800EE\r\n', 'distance': 5531, 'force': 9371, 'status': 34816}
+{'raw': ':021000000003062497159B8800F2\r\n', 'distance': 5531, 'force': 9367, 'status': 34816}
+{'raw': ':021000000003062494159C8800F4\r\n', 'distance': 5532, 'force': 9364, 'status': 34816}
+{'raw': ':02100000000306248C159C8800FC\r\n', 'distance': 5532, 'force': 9356, 'status': 34816}
+{'raw': ':021000000003062488159C880000\r\n', 'distance': 5532, 'force': 9352, 'status': 34816}
+{'raw': ':021000000003062490159D8800F7\r\n', 'distance': 5533, 'force': 9360, 'status': 34816}
+{'raw': ':021000000003062494159D8800F3\r\n', 'distance': 5533, 'force': 9364, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':021000000003062494159E8800F2\r\n', 'distance': 5534, 'force': 9364, 'status': 34816}
+{'raw': ':021000000003062494159E8800F2\r\n', 'distance': 5534, 'force': 9364, 'status': 34816}
+{'raw': ':021000000003062490159E8800F6\r\n', 'distance': 5534, 'force': 9360, 'status': 34816}
+{'raw': ':02100000000306248C159F8800F9\r\n', 'distance': 5535, 'force': 9356, 'status': 34816}
+{'raw': ':021000000003062490159F8800F5\r\n', 'distance': 5535, 'force': 9360, 'status': 34816}
+{'raw': ':02100000000306249015A08800F4\r\n', 'distance': 5536, 'force': 9360, 'status': 34816}
+{'raw': ':02100000000306248C15A08800F8\r\n', 'distance': 5536, 'force': 9356, 'status': 34816}
+{'raw': ':02100000000306249415A08800F0\r\n', 'distance': 5536, 'force': 9364, 'status': 34816}
+{'raw': ':0210000000030624AA15A18800D9\r\n', 'distance': 5537, 'force': 9386, 'status': 34816}
+{'raw': ':0210000000030624AE15A18800D5\r\n', 'distance': 5537, 'force': 9390, 'status': 34816}
+{'raw': ':0210000000030624AE15A18800D5\r\n', 'distance': 5537, 'force': 9390, 'status': 34816}
+{'raw': ':0210000000030624AE15A28800D4\r\n', 'distance': 5538, 'force': 9390, 'status': 34816}
+{'raw': ':0210000000030624AE15A28800D4\r\n', 'distance': 5538, 'force': 9390, 'status': 34816}
+{'raw': ':0210000000030624AA15A38800D7\r\n', 'distance': 5539, 'force': 9386, 'status': 34816}
+{'raw': ':0210000000030624A615A38800DB\r\n', 'distance': 5539, 'force': 9382, 'status': 34816}
+{'raw': ':02100000000306249F15A38800E2\r\n', 'distance': 5539, 'force': 9375, 'status': 34816}
+{'raw': ':0210000000030624A315A48800DD\r\n', 'distance': 5540, 'force': 9379, 'status': 34816}
+{'raw': ':0210000000030624AE15A48800D2\r\n', 'distance': 5540, 'force': 9390, 'status': 34816}
+{'raw': ':0210000000030624B915A58800C6\r\n', 'distance': 5541, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624C415A58800BB\r\n', 'distance': 5541, 'force': 9412, 'status': 34816}
+{'raw': ':0210000000030624CF15A58800B0\r\n', 'distance': 5541, 'force': 9423, 'status': 34816}
+{'raw': ':0210000000030624CC15A68800B2\r\n', 'distance': 5542, 'force': 9420, 'status': 34816}
+{'raw': ':0210000000030624CF15A68800AF\r\n', 'distance': 5542, 'force': 9423, 'status': 34816}
+{'raw': ':0210000000030624D715A78800A6\r\n', 'distance': 5543, 'force': 9431, 'status': 34816}
+{'raw': ':0210000000030624DA15A78800A3\r\n', 'distance': 5543, 'force': 9434, 'status': 34816}
+{'raw': ':0210000000030624D715A78800A6\r\n', 'distance': 5543, 'force': 9431, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':0210000000030624CC15A88800B0\r\n', 'distance': 5544, 'force': 9420, 'status': 34816}
+{'raw': ':0210000000030624C415A88800B8\r\n', 'distance': 5544, 'force': 9412, 'status': 34816}
+{'raw': ':0210000000030624B915A88800C3\r\n', 'distance': 5544, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624B115A88800CB\r\n', 'distance': 5544, 'force': 9393, 'status': 34816}
+{'raw': ':0210000000030624B915A88800C3\r\n', 'distance': 5544, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624B515A88800C7\r\n', 'distance': 5544, 'force': 9397, 'status': 34816}
+{'raw': ':0210000000030624B115A88800CB\r\n', 'distance': 5544, 'force': 9393, 'status': 34816}
+{'raw': ':0210000000030624B915A88800C3\r\n', 'distance': 5544, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624B915A88800C3\r\n', 'distance': 5544, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624B915A88800C3\r\n', 'distance': 5544, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624B915A88800C3\r\n', 'distance': 5544, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624B915A88800C3\r\n', 'distance': 5544, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624B515A88800C7\r\n', 'distance': 5544, 'force': 9397, 'status': 34816}
+{'raw': ':0210000000030624B915A88800C3\r\n', 'distance': 5544, 'force': 9401, 'status': 34816}
+{'raw': ':0210000000030624B515A88800C7\r\n', 'distance': 5544, 'force': 9397, 'status': 34816}
+{'raw': ':0210000000030624B515A88800C7\r\n', 'distance': 5544, 'force': 9397, 'status': 34816}
+{'raw': ':02100000000306242415A8880058\r\n', 'distance': 5544, 'force': 9252, 'status': 34816}
+{'raw': ':02100000000306240D15A7880070\r\n', 'distance': 5543, 'force': 9229, 'status': 34816}
+{'raw': ':0210000000030623FF15A6880080\r\n', 'distance': 5542, 'force': 9215, 'status': 34816}
+{'raw': ':0210000000030623FB15A6880084\r\n', 'distance': 5542, 'force': 9211, 'status': 34816}
+{'raw': ':0210000000030623EC15A5880094\r\n', 'distance': 5541, 'force': 9196, 'status': 34816}
+{'raw': ':0210000000030623D215A48800AF\r\n', 'distance': 5540, 'force': 9170, 'status': 34816}
+{'raw': ':0210000000030623B815A48800C9\r\n', 'distance': 5540, 'force': 9144, 'status': 34816}
+{'raw': ':0210000000030623B015A38800D2\r\n', 'distance': 5539, 'force': 9136, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':0210000000030623AD15A28800D6\r\n', 'distance': 5538, 'force': 9133, 'status': 34816}
+{'raw': ':0210000000030623B015A28800D3\r\n', 'distance': 5538, 'force': 9136, 'status': 34816}
+{'raw': ':0210000000030623B415A18800D0\r\n', 'distance': 5537, 'force': 9140, 'status': 34816}
+{'raw': ':02100000000306239E15A08800E7\r\n', 'distance': 5536, 'force': 9118, 'status': 34816}
+{'raw': ':02100000000306238F15A08800F6\r\n', 'distance': 5536, 'force': 9103, 'status': 34816}
+{'raw': ':02100000000306238F159F8800F7\r\n', 'distance': 5535, 'force': 9103, 'status': 34816}
+{'raw': ':02100000000306238F159E8800F8\r\n', 'distance': 5534, 'force': 9103, 'status': 34816}
+{'raw': ':02100000000306238F159D8800F9\r\n', 'distance': 5533, 'force': 9103, 'status': 34816}
+{'raw': ':021000000003062396159D8800F2\r\n', 'distance': 5533, 'force': 9110, 'status': 34816}
+{'raw': ':0210000000030623A1159C8800E8\r\n', 'distance': 5532, 'force': 9121, 'status': 34816}
+{'raw': ':0210000000030623B0159B8800DA\r\n', 'distance': 5531, 'force': 9136, 'status': 34816}
+{'raw': ':0210000000030623B0159B8800DA\r\n', 'distance': 5531, 'force': 9136, 'status': 34816}
+{'raw': ':0210000000030623AD159A8800DE\r\n', 'distance': 5530, 'force': 9133, 'status': 34816}
+{'raw': ':02100000000306239615998800F6\r\n', 'distance': 5529, 'force': 9110, 'status': 34816}
+{'raw': ':02100000000306239615998800F6\r\n', 'distance': 5529, 'force': 9110, 'status': 34816}
+{'raw': ':0210000000030623A515988800E8\r\n', 'distance': 5528, 'force': 9125, 'status': 34816}
+{'raw': ':0210000000030623B015978800DE\r\n', 'distance': 5527, 'force': 9136, 'status': 34816}
+{'raw': ':0210000000030623BB15978800D3\r\n', 'distance': 5527, 'force': 9147, 'status': 34816}
+{'raw': ':0210000000030623BF15968800D0\r\n', 'distance': 5526, 'force': 9151, 'status': 34816}
+{'raw': ':0210000000030623B815958800D8\r\n', 'distance': 5525, 'force': 9144, 'status': 34816}
+{'raw': ':0210000000030623AD15958800E3\r\n', 'distance': 5525, 'force': 9133, 'status': 34816}
+{'raw': ':0210000000030623A515948800EC\r\n', 'distance': 5524, 'force': 9125, 'status': 34816}
+{'raw': ':02100000000306239E15938800F4\r\n', 'distance': 5523, 'force': 9118, 'status': 34816}
+{'raw': ':0210000000030623A515928800EE\r\n', 'distance': 5522, 'force': 9125, 'status': 34816}
+{'raw': ':0210000000030623A915928800EA\r\n', 'distance': 5522, 'force': 9129, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':0210000000030623A915918800EB\r\n', 'distance': 5521, 'force': 9129, 'status': 34816}
+{'raw': ':02100000000306239A15908800FB\r\n', 'distance': 5520, 'force': 9114, 'status': 34816}
+{'raw': ':02100000000306238F1590880006\r\n', 'distance': 5520, 'force': 9103, 'status': 34816}
+{'raw': ':02100000000306238B158F88000B\r\n', 'distance': 5519, 'force': 9099, 'status': 34816}
+{'raw': ':021000000003062384158E880013\r\n', 'distance': 5518, 'force': 9092, 'status': 34816}
+{'raw': ':02100000000306236D158E88002A\r\n', 'distance': 5518, 'force': 9069, 'status': 34816}
+{'raw': ':02100000000306235B158D88003D\r\n', 'distance': 5517, 'force': 9051, 'status': 34816}
+{'raw': ':021000000003062357158C880042\r\n', 'distance': 5516, 'force': 9047, 'status': 34816}
+{'raw': ':021000000003062357158B880043\r\n', 'distance': 5515, 'force': 9047, 'status': 34816}
+{'raw': ':021000000003062340158B88005A\r\n', 'distance': 5515, 'force': 9024, 'status': 34816}
+{'raw': ':021000000003062326158A880075\r\n', 'distance': 5514, 'force': 8998, 'status': 34816}
+{'raw': ':0210000000030623141589880088\r\n', 'distance': 5513, 'force': 8980, 'status': 34816}
+{'raw': ':0210000000030622F615898800A7\r\n', 'distance': 5513, 'force': 8950, 'status': 34816}
+{'raw': ':0210000000030622D815888800C6\r\n', 'distance': 5512, 'force': 8920, 'status': 34816}
+{'raw': ':0210000000030622D415878800CB\r\n', 'distance': 5511, 'force': 8916, 'status': 34816}
+{'raw': ':0210000000030622DC15878800C3\r\n', 'distance': 5511, 'force': 8924, 'status': 34816}
+{'raw': ':0210000000030622DC15868800C4\r\n', 'distance': 5510, 'force': 8924, 'status': 34816}
+{'raw': ':0210000000030622EB15858800B6\r\n', 'distance': 5509, 'force': 8939, 'status': 34816}
+{'raw': ':021000000003062305158588009B\r\n', 'distance': 5509, 'force': 8965, 'status': 34816}
+{'raw': ':021000000003062326158488007B\r\n', 'distance': 5508, 'force': 8998, 'status': 34816}
+{'raw': ':021000000003062344158388005E\r\n', 'distance': 5507, 'force': 9028, 'status': 34816}
+{'raw': ':021000000003062357158288004C\r\n', 'distance': 5506, 'force': 9047, 'status': 34816}
+{'raw': ':021000000003062369158288003A\r\n', 'distance': 5506, 'force': 9065, 'status': 34816}
+{'raw': ':021000000003062387158188001D\r\n', 'distance': 5505, 'force': 9095, 'status': 34816}
+{'raw': ':02100000000306239A158088000B\r\n', 'distance': 5504, 'force': 9114, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':02100000000306239E1580880007\r\n', 'distance': 5504, 'force': 9118, 'status': 34816}
+{'raw': ':021000000003062396157F880010\r\n', 'distance': 5503, 'force': 9110, 'status': 34816}
+{'raw': ':02100000000306239E157E880009\r\n', 'distance': 5502, 'force': 9118, 'status': 34816}
+{'raw': ':0210000000030623A5157D880003\r\n', 'distance': 5501, 'force': 9125, 'status': 34816}
+{'raw': ':0210000000030623B0157D8800F8\r\n', 'distance': 5501, 'force': 9136, 'status': 34816}
+{'raw': ':0210000000030623B4157C8800F5\r\n', 'distance': 5500, 'force': 9140, 'status': 34816}
+{'raw': ':0210000000030623B8157B8800F2\r\n', 'distance': 5499, 'force': 9144, 'status': 34816}
+{'raw': ':0210000000030623B0157B8800FA\r\n', 'distance': 5499, 'force': 9136, 'status': 34816}
+{'raw': ':0210000000030623AD157A8800FE\r\n', 'distance': 5498, 'force': 9133, 'status': 34816}
+{'raw': ':0210000000030623CA15798800E2\r\n', 'distance': 5497, 'force': 9162, 'status': 34816}
+{'raw': ':0210000000030623D915798800D3\r\n', 'distance': 5497, 'force': 9177, 'status': 34816}
+{'raw': ':0210000000030623CE15788800DF\r\n', 'distance': 5496, 'force': 9166, 'status': 34816}
+{'raw': ':0210000000030623C715778800E7\r\n', 'distance': 5495, 'force': 9159, 'status': 34816}
+{'raw': ':0210000000030623B815768800F7\r\n', 'distance': 5494, 'force': 9144, 'status': 34816}
+{'raw': ':0210000000030623A5157688000A\r\n', 'distance': 5494, 'force': 9125, 'status': 34816}
+{'raw': ':021000000003062396157588001A\r\n', 'distance': 5493, 'force': 9110, 'status': 34816}
+{'raw': ':0210000000030623A11574880010\r\n', 'distance': 5492, 'force': 9121, 'status': 34816}
+{'raw': ':0210000000030623B01574880001\r\n', 'distance': 5492, 'force': 9136, 'status': 34816}
+{'raw': ':0210000000030623B415738800FE\r\n', 'distance': 5491, 'force': 9140, 'status': 34816}
+{'raw': ':0210000000030623AD1572880006\r\n', 'distance': 5490, 'force': 9133, 'status': 34816}
+{'raw': ':0210000000030623A5157188000F\r\n', 'distance': 5489, 'force': 9125, 'status': 34816}
+{'raw': ':0210000000030623A5157188000F\r\n', 'distance': 5489, 'force': 9125, 'status': 34816}
+{'raw': ':02100000000306239E1570880017\r\n', 'distance': 5488, 'force': 9118, 'status': 34816}
+{'raw': ':02100000000306239A156F88001C\r\n', 'distance': 5487, 'force': 9114, 'status': 34816}
+{'raw': ':02100000000306238F156F880027\r\n', 'distance': 5487, 'force': 9103, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':021000000003062380156E880037\r\n', 'distance': 5486, 'force': 9088, 'status': 34816}
+{'raw': ':021000000003062375156D880043\r\n', 'distance': 5485, 'force': 9077, 'status': 34816}
+{'raw': ':021000000003062369156C880050\r\n', 'distance': 5484, 'force': 9065, 'status': 34816}
+{'raw': ':02100000000306235E156C88005B\r\n', 'distance': 5484, 'force': 9054, 'status': 34816}
+{'raw': ':02100000000306234C156B88006E\r\n', 'distance': 5483, 'force': 9036, 'status': 34816}
+{'raw': ':021000000003062340156A88007B\r\n', 'distance': 5482, 'force': 9024, 'status': 34816}
+{'raw': ':0210000000030623391569880083\r\n', 'distance': 5481, 'force': 9017, 'status': 34816}
+{'raw': ':0210000000030623391568880084\r\n', 'distance': 5480, 'force': 9017, 'status': 34816}
+{'raw': ':02100000000306233D1568880080\r\n', 'distance': 5480, 'force': 9021, 'status': 34816}
+{'raw': ':02100000000306234F156788006F\r\n', 'distance': 5479, 'force': 9039, 'status': 34816}
+{'raw': ':0210000000030623571566880068\r\n', 'distance': 5478, 'force': 9047, 'status': 34816}
+{'raw': ':021000000003062344156588007C\r\n', 'distance': 5477, 'force': 9028, 'status': 34816}
+{'raw': ':02100000000306232E1565880092\r\n', 'distance': 5477, 'force': 9006, 'status': 34816}
+{'raw': ':021000000003062326156488009B\r\n', 'distance': 5476, 'force': 8998, 'status': 34816}
+{'raw': ':02100000000306231F15638800A3\r\n', 'distance': 5475, 'force': 8991, 'status': 34816}
+{'raw': ':02100000000306232A1562880099\r\n', 'distance': 5474, 'force': 9002, 'status': 34816}
+{'raw': ':021000000003062339156288008A\r\n', 'distance': 5474, 'force': 9017, 'status': 34816}
+{'raw': ':02100000000306232E1561880096\r\n', 'distance': 5473, 'force': 9006, 'status': 34816}
+{'raw': ':02100000000306233D1560880088\r\n', 'distance': 5472, 'force': 9021, 'status': 34816}
+{'raw': ':021000000003062348155F88007E\r\n', 'distance': 5471, 'force': 9032, 'status': 34816}
+{'raw': ':02100000000306233D155E88008A\r\n', 'distance': 5470, 'force': 9021, 'status': 34816}
+{'raw': ':02100000000306232A155E88009D\r\n', 'distance': 5470, 'force': 9002, 'status': 34816}
+{'raw': ':021000000003062309155D8800BF\r\n', 'distance': 5469, 'force': 8969, 'status': 34816}
+{'raw': ':0210000000030622FA155C8800D0\r\n', 'distance': 5468, 'force': 8954, 'status': 34816}
+{'raw': ':0210000000030622F6155B8800D5\r\n', 'distance': 5467, 'force': 8950, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':0210000000030622FA155B8800D1\r\n', 'distance': 5467, 'force': 8954, 'status': 34816}
+{'raw': ':021000000003062310155A8800BB\r\n', 'distance': 5466, 'force': 8976, 'status': 34816}
+{'raw': ':02100000000306232615598800A6\r\n', 'distance': 5465, 'force': 8998, 'status': 34816}
+{'raw': ':021000000003062332155888009B\r\n', 'distance': 5464, 'force': 9010, 'status': 34816}
+{'raw': ':02100000000306232315588800AA\r\n', 'distance': 5464, 'force': 8995, 'status': 34816}
+{'raw': ':0210000000030622F615578800D9\r\n', 'distance': 5463, 'force': 8950, 'status': 34816}
+{'raw': ':0210000000030622E015568800F0\r\n', 'distance': 5462, 'force': 8928, 'status': 34816}
+{'raw': ':0210000000030622EB15558800E6\r\n', 'distance': 5461, 'force': 8939, 'status': 34816}
+{'raw': ':0210000000030622FA15558800D7\r\n', 'distance': 5461, 'force': 8954, 'status': 34816}
+{'raw': ':0210000000030622FA15548800D8\r\n', 'distance': 5460, 'force': 8954, 'status': 34816}
+{'raw': ':0210000000030622FD15538800D6\r\n', 'distance': 5459, 'force': 8957, 'status': 34816}
+{'raw': ':0210000000030622F615528800DE\r\n', 'distance': 5458, 'force': 8950, 'status': 34816}
+{'raw': ':0210000000030622D815518800FD\r\n', 'distance': 5457, 'force': 8920, 'status': 34816}
+{'raw': ':0210000000030622C21551880013\r\n', 'distance': 5457, 'force': 8898, 'status': 34816}
+{'raw': ':0210000000030622C51550880011\r\n', 'distance': 5456, 'force': 8901, 'status': 34816}
+{'raw': ':0210000000030622D4154F880003\r\n', 'distance': 5455, 'force': 8916, 'status': 34816}
+{'raw': ':0210000000030622E0154E8800F8\r\n', 'distance': 5454, 'force': 8928, 'status': 34816}
+{'raw': ':0210000000030622EE154E8800EA\r\n', 'distance': 5454, 'force': 8942, 'status': 34816}
+{'raw': ':0210000000030622F2154D8800E7\r\n', 'distance': 5453, 'force': 8946, 'status': 34816}
+{'raw': ':0210000000030622F6154C8800E4\r\n', 'distance': 5452, 'force': 8950, 'status': 34816}
+{'raw': ':0210000000030622FD154B8800DE\r\n', 'distance': 5451, 'force': 8957, 'status': 34816}
+{'raw': ':0210000000030622FA154B8800E1\r\n', 'distance': 5451, 'force': 8954, 'status': 34816}
+{'raw': ':0210000000030622E7154A8800F5\r\n', 'distance': 5450, 'force': 8935, 'status': 34816}
+{'raw': ':0210000000030622CD1549880010\r\n', 'distance': 5449, 'force': 8909, 'status': 34816}
+{'raw': ':0210000000030622C51548880019\r\n', 'distance': 5448, 'force': 8901, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+{'raw': ':0210000000030622D4154788000B\r\n', 'distance': 5447, 'force': 8916, 'status': 34816}
+{'raw': ':0210000000030622E715478800F8\r\n', 'distance': 5447, 'force': 8935, 'status': 34816}
+{'raw': ':0210000000030622EE15468800F2\r\n', 'distance': 5446, 'force': 8942, 'status': 34816}
+{'raw': ':0210000000030622F615458800EB\r\n', 'distance': 5445, 'force': 8950, 'status': 34816}
+{'raw': ':0210000000030622FD15448800E5\r\n', 'distance': 5444, 'force': 8957, 'status': 34816}
+{'raw': ':0210000000030622FD15448800E5\r\n', 'distance': 5444, 'force': 8957, 'status': 34816}
+{'raw': ':0210000000030622F615438800ED\r\n', 'distance': 5443, 'force': 8950, 'status': 34816}
+{'raw': ':0210000000030622EB15428800F9\r\n', 'distance': 5442, 'force': 8939, 'status': 34816}
+{'raw': ':0210000000030622D41541880011\r\n', 'distance': 5441, 'force': 8916, 'status': 34816}
+{'raw': ':0210000000030622B31541880032\r\n', 'distance': 5441, 'force': 8883, 'status': 34816}
+{'raw': ':0210000000030622861540880060\r\n', 'distance': 5440, 'force': 8838, 'status': 34816}
+{'raw': ':021000000003062256153F880091\r\n', 'distance': 5439, 'force': 8790, 'status': 34816}
+{'raw': ':021000000003062225153F8800C2\r\n', 'distance': 5439, 'force': 8741, 'status': 34816}
+{'raw': ':021000000003062229153F8800BE\r\n', 'distance': 5439, 'force': 8745, 'status': 34816}
+{'raw': ':021000000003062230153F8800B7\r\n', 'distance': 5439, 'force': 8752, 'status': 34816}
+{'raw': ':021000000003062230153F8800B7\r\n', 'distance': 5439, 'force': 8752, 'status': 34816}
+{'raw': ':021000000003062230153F8800B7\r\n', 'distance': 5439, 'force': 8752, 'status': 34816}
+{'raw': ':021000000003062230153F8800B7\r\n', 'distance': 5439, 'force': 8752, 'status': 34816}
+{'raw': ':021000000003062230153F8800B7\r\n', 'distance': 5439, 'force': 8752, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 618, in handle_data
+    self.highlight_plot(x, y)
+TypeError: highlight_plot() missing 1 required positional argument: 'index'
+结束按钮被点击
+停止发送数据
+恒定度计算： 41.64019999999999 34.87819999999999
+恒定度 changed: 8.8371%
+总位移 changed: 120.00
+位移终止点值 changed: 95.00
+位移起始点值 changed: 100.00
+实测位移值 changed: 105.00
+超载试验值 changed: 86592N
+载荷偏差度 changed: 99.91%
+起始-终止时间 changed: 17:58:25-18:03:19
+超载试验保持时间 changed: 4分54秒
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+Traceback (most recent call last):
+  File "d:\tension_pc\widgets\sub_widgets\test_widget_1.py", line 569, in handle_data
+    def handle_data(self, data):
+KeyboardInterrupt
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
+{'raw': ':021000000003062234153F8800B3\r\n', 'distance': 5439, 'force': 8756, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223F153F8800A8\r\n', 'distance': 5439, 'force': 8767, 'status': 34816}
+{'raw': ':02100000000306223C153F8800AB\r\n', 'distance': 5439, 'force': 8764, 'status': 34816}
+{'raw': ':021000000003062238153F8800AF\r\n', 'distance': 5439, 'force': 8760, 'status': 34816}
