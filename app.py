@@ -87,6 +87,13 @@ class MainWindow(QMainWindow):
 
         self.showMaximized()
 
+    def closeEvent(self, event):
+        try:
+            self.chart_widget1.persist_test_widget_comboboxes()
+        except Exception:
+            pass
+        super().closeEvent(event)
+
     def handle_print_doc(self):
         # 1. 无效记录检查
         if self.now_handle_data_id <= 0:

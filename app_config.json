@@ -2,5 +2,46 @@
   "printer_name": "Microsoft Print to PDF",
   "print_save_path": "D:/lcynju/Documents/Projects/2025huitong",
   "serial_port": "COM1",
-  "overload_factor": 2.5
+  "overload_factor": 2.5,
+  "combobox_history": {},
+  "test_widget_1_comboboxes": {
+    "工程名称": {
+      "items": [
+        "新的测试工程",
+        "测试工程"
+      ],
+      "value": "新的测试工程"
+    },
+    "管线号-支吊点号": {
+      "items": [
+        "一个新的号码",
+        "测试吊点号"
+      ],
+      "value": "一个新的号码"
+    },
+    "位移方向": {
+      "items": [
+        "+",
+        "-"
+      ],
+      "value": "+"
+    },
+    "试验人员": {
+      "items": [
+        "我是一个新人",
+        "刘云佳",
+        "张三",
+        "李四"
+      ],
+      "value": "我是一个新人"
+    },
+    "批准人员": {
+      "items": [
+        "陈广春",
+        "王五",
+        "赵六"
+      ],
+      "value": "陈广春"
+    }
+  }
 }

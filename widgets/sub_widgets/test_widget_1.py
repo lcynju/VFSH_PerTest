@@ -14,7 +14,7 @@ import pyqtgraph as pg
 from pyqtgraph import TextItem
 
 from utils.serial_reader import SerialReader
-from utils.config_manager import get_serial_port, get_overload_factor, get_combobox_history, save_combobox_item
+from utils.config_manager import get_serial_port, get_test_widget_1_combobox, save_test_widget_1_comboboxes
 from utils.data_manager import DataManager
 from PO.input_data import inputManager
 from pyqtgraph import InfiniteLine
@@ -32,7 +32,6 @@ class TestViewWidget_1(QWidget):
 
     # 记录表单控件
     inputs = {}
-    _history_combobox_keys = set()
     input_manager = inputManager()
     # 数据库
     DataManager = DataManager()
@@ -42,6 +41,18 @@ class TestViewWidget_1(QWidget):
     # 归零记录的传感器的值
     _zzgl_x_value = None
     _wzgl_y_value = None
+    _wzgl_x_value_hezai_min = None
+
+    #冷态的相关数值：位移和载荷
+    _lt_x_value_hezai_zhengding = None
+    _lt_y_value_weiyi = None
+
+    #最大位移：载荷
+    _zdwy_x_value_hezai_max = None
+
+    #热态的相关数值：位移和载荷
+    _rt_x_value_hezai_shice = None
+    _rt_y_value_weiyi = None
 
     _display_point = False
     _recorded_x_values = []
@@ -85,28 +96,45 @@ class TestViewWidget_1(QWidget):
         button_layout = QHBoxLayout()
         self.zz_zero_btn = QPushButton("自重归零")
         self.wz_zero_btn = QPushButton("位置归零")
-        self.finish_test_btn = QPushButton("结束")
+        self.cold_step_btn = QPushButton("冷态踩点")
+        self.max_step_btn = QPushButton("最大位移踩点")
+        self.hot_step_btn = QPushButton("热态踩点")
         self.save_data_btn = QPushButton("入库")
-        for btn in (self.zz_zero_btn, self.wz_zero_btn, self.finish_test_btn, self.save_data_btn):
+        for btn in (
+                self.zz_zero_btn,
+                self.wz_zero_btn,
+                self.cold_step_btn,
+                self.max_step_btn,
+                self.hot_step_btn,
+                self.save_data_btn,
+        ):
             btn.setFont(font)
             btn.setFixedHeight(30)
         self.zz_zero_btn.setMinimumSize(90, 40)
         self.wz_zero_btn.setMinimumSize(90, 40)
-        self.finish_test_btn.setMinimumSize(90, 40)
+        self.cold_step_btn.setMinimumSize(110, 40)
+        self.max_step_btn.setMinimumSize(130, 40)
+        self.hot_step_btn.setMinimumSize(110, 40)
         self.save_data_btn.setMinimumSize(90, 40)
         button_layout.addWidget(self.zz_zero_btn)
         button_layout.addWidget(self.wz_zero_btn)
-        button_layout.addWidget(self.finish_test_btn)
+        button_layout.addWidget(self.cold_step_btn)
+        button_layout.addWidget(self.max_step_btn)
+        button_layout.addWidget(self.hot_step_btn)
         button_layout.addWidget(self.save_data_btn)
         form_layout.addLayout(button_layout)
 
         self.wz_zero_btn.setEnabled(False)
-        self.finish_test_btn.setEnabled(False)
+        self.cold_step_btn.setEnabled(False)
+        self.max_step_btn.setEnabled(False)
+        self.hot_step_btn.setEnabled(False)
         self.save_data_btn.setEnabled(False)
 
         # 绑定槽函数
         self.wz_zero_btn.clicked.connect(self.on_wz_zero_reset)
-        self.finish_test_btn.clicked.connect(self.on_finish_clicked)
+        self.cold_step_btn.clicked.connect(self.on_cold_step_clicked)
+        self.max_step_btn.clicked.connect(self.on_max_step_clicked)
+        self.hot_step_btn.clicked.connect(self.on_hot_step_clicked)
         self.zz_zero_btn.clicked.connect(self.on_zz_zero_reset)
         self.save_data_btn.clicked.connect(self.on_save_data_clicked)
 
@@ -118,27 +146,27 @@ class TestViewWidget_1(QWidget):
         # 所有表单字段统一放入表格（两列：名称 + 值）
         # 每项: (标签文本, 存储key, 控件类型, 可选配置)
         table_rows = [
-            ("工程名称：", "工程名称", "combobox", {"items": ["测试工程"], "default": "测试工程", "save_history": True}),
-            ("出厂编号：", "出厂编号", "lineedit", "20260322001"),
-            ("试验日期：", "试验日期", "label", "2026-03-22"),
-            ("管系名称：", "管系名称", "lineedit", "测试管系"),
-            ("管线号-支吊点号：", "管线号-支吊点号", "combobox", {"items": ["测试吊点号"], "default": "测试吊点号", "save_history": True}),
-            ("规格型号：", "规格型号", "lineedit", "测试规格"),
-            ("位移方向：", "位移方向", "combobox", {"items": ["+", "-"], "default": "+"}),
-            ("工作/热态载荷（N）：", "工作载荷", "lineedit", "1223"),
-            ("安装/冷态载荷（N）：", "安装冷态载荷", "lineedit", "3233"),
-            ("安装/冷态位置（mm）：", "安装冷态位置", "lineedit", "200"),
-            ("螺纹尺寸（M）：", "螺纹尺寸", "lineedit", "0.3"),
-            ("弹簧刚度：", "弹簧刚度", "lineedit", "2000"),
-            ("试验人员：", "试验人员", "combobox", {"items": ["刘云佳", "张三", "李四"], "default": "刘云佳"}),
-            ("批准人员：", "批准人员", "combobox", {"items": ["陈广春", "王五", "赵六"], "default": "陈广春"}),
-            ("整定载荷实测值（N）：", "整定载荷实测值", "label", None),
-            ("载荷偏差度：", "载荷偏差度", "label", None),
-            ("最小位移（mm）：", "最小位移", "label", None),
-            ("最小位移实测载荷（N）：", "最小位移实测载荷", "label", None),
-            ("最大位移（mm）：", "最大位移", "label", None),
-            ("最大位移实测载荷（N）：", "最大位移实测载荷", "label", None),
-            ("测试结论：", "测试结论", "label", None),
+            ("工程名称", "工程名称", "combobox", {}),
+            ("出厂编号", "出厂编号", "lineedit", "20260322001"),
+            ("试验日期", "试验日期", "label", "2026-03-22"),
+            ("管系名称", "管系名称", "lineedit", "测试管系"),
+            ("管线号-支吊点号：", "管线号-支吊点号", "combobox", {}),
+            ("规格型号", "规格型号", "lineedit", "测试规格"),
+            ("位移方向", "位移方向", "combobox", {}),
+            ("工作/热态载荷（N）", "工作载荷", "lineedit", "1223"),
+            ("安装/冷态载荷（N）", "安装冷态载荷", "lineedit", "3233"),
+            ("安装/冷态位置（mm）", "安装冷态位置", "lineedit", "200"),
+            ("螺纹尺寸（M）", "螺纹尺寸", "lineedit", "0.3"),
+            ("弹簧刚度", "弹簧刚度", "lineedit", "2000"),
+            ("试验人员", "试验人员", "combobox", {}),
+            ("批准人员", "批准人员", "combobox", {}),
+            ("整定载荷实测值（N）", "整定载荷实测值", "label", None),
+            ("载荷偏差度", "载荷偏差度", "label", None),
+            ("最小位移（mm）", "最小位移", "label", None),
+            ("最小位移实测载荷（N）", "最小位移实测载荷", "label", None),
+            ("最大位移（mm）", "最大位移", "label", None),
+            ("最大位移实测载荷（N）", "最大位移实测载荷", "label", None),
+            ("测试结论", "测试结论", "label", None),
         ]
         result_table = QTableWidget(len(table_rows), 2)
         result_table.horizontalHeader().setVisible(False)
@@ -180,13 +208,12 @@ class TestViewWidget_1(QWidget):
                 inputManager.set_value(self.input_manager, key, cfg)
             elif widget_type == "combobox":
                 value_widget = QComboBox()
-                value_widget.addItems(cfg["items"])
-                value_widget.setCurrentText(cfg["default"])
+                items, default_text = get_test_widget_1_combobox(key)
+                value_widget.addItems(items)
+                value_widget.setCurrentText(default_text)
                 value_widget.setEditable(True)
                 value_widget.lineEdit().setAlignment(Qt.AlignCenter)
-                if cfg.get("save_history"):
-                    self._history_combobox_keys.add(key)
-                inputManager.set_value(self.input_manager, key, cfg["default"])
+                inputManager.set_value(self.input_manager, key, default_text)
             else:
                 value_widget = QLabel()
                 value_widget.setStyleSheet("background-color: #F0F0F0;")
@@ -274,6 +301,7 @@ class TestViewWidget_1(QWidget):
             return
         if self._latest_y_value is not None and self._zzgl_x_value is not None:
             self._wzgl_y_value = self._latest_y_value
+            self._wzgl_x_value_hezai_min = self._latest_x_value
             QMessageBox.information(self, "提示", f"成功将位置归零值设置为：{self._wzgl_y_value}")
         else:
             QMessageBox.warning(self, "提示", "读取位置清零位置值失败，请重新读取。")
@@ -287,18 +315,55 @@ class TestViewWidget_1(QWidget):
         self._display_point = True
 
         self.wz_zero_btn.setEnabled(False)
-        self.finish_test_btn.setEnabled(True)
+        self.cold_step_btn.setEnabled(True)
+        # 归零成功后，踩点按钮链路开始，禁用位置归零按钮（避免重复归零破坏链路）
+        self.max_step_btn.setEnabled(False)
+        self.hot_step_btn.setEnabled(False)
+        self.save_data_btn.setEnabled(False)
         
-    def on_finish_clicked(self):
+    def persist_test_widget_comboboxes(self):
+        """将当前所有 combobox 的下拉项与当前文本写入 app_config.json。"""
+        data = {}
+        for key, w in self.inputs.items():
+            if isinstance(w, QComboBox):
+                items = [w.itemText(i) for i in range(w.count())]
+                data[key] = {"items": items, "value": w.currentText().strip()}
+        save_test_widget_1_comboboxes(data)
+
+    def on_cold_step_clicked(self):
+        if self._latest_x_value is not None and self._latest_y_value is not None:
+            # 冷态踩点：整定载荷与位移
+            self._lt_x_value_hezai_zhengding = self._latest_x_value
+            self._lt_y_value_weiyi = self._latest_y_value
+        else:
+            QMessageBox.warning(self, "提示", "读取冷态踩点位置值失败，请重新读取。")
+            return
+
+        # 显示到面板 label（整定载荷实测值）
+        w = self.inputs.get("整定载荷实测值")
+        if isinstance(w, QLabel):
+            w.setText(str(self._lt_x_value_hezai_zhengding))
+        # 同步到 input_manager，便于后续入库/打印等逻辑统一取值
+        try:
+            self.input_manager.set_value("整定载荷实测值", str(self._lt_x_value_hezai_zhengding))
+        except Exception:
+            pass
+
+        self.cold_step_btn.setEnabled(False)
+        self.max_step_btn.setEnabled(True)
+
+    def on_max_step_clicked(self):
+        self.max_step_btn.setEnabled(False)
+        self.hot_step_btn.setEnabled(True)
+
+    def on_hot_step_clicked(self):
         self._display_point = False
-        self.finish_test_btn.setEnabled(False)
+        self.hot_step_btn.setEnabled(False)
         self.save_data_btn.setEnabled(True)
+        self.persist_test_widget_comboboxes()
 
     def on_save_data_clicked(self):
         self.save_data_requested.emit()
-
-    def reanalyze_and_rearrange_labels(self):
-        return
 
     def create_chart(self, x: list, y: list, x_center=5000, y_center=5000):
         self.plot_widget = pg.PlotWidget()
