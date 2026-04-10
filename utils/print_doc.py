@@ -102,16 +102,27 @@ def print_doc(now_handle_data_id=-1, existing_file_path=None):
     # 双重防护：无效记录或测试数据为空时直接返回，避免崩溃
     if detail is None:
         return
-    x_list, y_list, highlight, side_right = DataManager.queryTestDataByFormId(now_handle_data_id)
+    x_list, y_list, highlight = DataManager.queryTestDataByFormId(now_handle_data_id)
     if not x_list or not y_list:
         return
     
     # 保存 Word 文件（使用配置的根目录/年份/月份/）
     save_dir = get_print_save_dir_for_today()
     # 出厂编号+测试时间，避免同出厂编号多次测试时文件名冲突
-    test_time_safe = (str(detail[1]) if detail[1] else "").replace(":", "-").replace(" ", "_").replace("/", "-")
+    # test_detail schema (data_manager.py):
+    # 0 test_id
+    # 1 project_name
+    # 2 factory_number
+    # 3 test_date
+    # 4 pipeline_name
+    # 5 line_hanger_no
+    # 6 spec_model
+    # 7 travel_direction
+    # 8 working_load_n
+    # ...
+    test_time_safe = (str(detail[3]) if detail[3] else "").replace(":", "-").replace(" ", "_").replace("/", "-")
     time_suffix = f"-{test_time_safe}" if test_time_safe else ""
-    filename = f"恒力吊架性能试验记录-{detail[4]}{time_suffix}.docx"
+    filename = f"变力弹簧支吊架性能试验记录-{detail[2]}{time_suffix}.docx"
     full_path = os.path.abspath(os.path.join(save_dir, filename))
 
     # 创建文档
@@ -202,35 +213,33 @@ def print_doc(now_handle_data_id=-1, existing_file_path=None):
         for row in table1.rows:
             row.cells[i].width = width
 
-    # TODO：边框设置加粗
-    # detail字段顺序见data_manager.py表结构
-    # (id, test_time, user, 吊点代号, 出厂编号, 型号规格, 工作荷载, 位移方向, 总位移, 工作位移, 操作员, 检验员, 位移起始点值, 位移终止点值, 实测位移值, 超载试验值, 起止时间, 保持时间, 恒定度, 锁定位置，载荷偏差度, 测试结果)
+    # detail 字段顺序见 DataManager.TEST_DETAIL_SELECT_COLS（test_detail）
     table1.rows[0].cells[0].text = "用户\nCustomer"
     table1.rows[0].cells[2].text = "规格型号\nDescription and type"
     table1.rows[0].cells[4].text = "试验日期\nTest Date"
     # 第二行内容 吊点代号 总位移 工作载荷
-    table1.rows[1].cells[0].text = "吊点代号\nHanger Number"
-    table1.rows[1].cells[2].text = "总位移\nTotal travel"
+    table1.rows[1].cells[0].text = "管线号-支吊点号\nHanger Number"
+    table1.rows[1].cells[2].text = "安装/冷态位置\nCold position"
     table1.rows[1].cells[4].text = "工作载荷\nWorking Load"
     # 第三行内容 出场编号 位移方向 工作位移
     table1.rows[2].cells[0].text = "出厂编号\nSerial Number"
     table1.rows[2].cells[2].text = "位移方向\nTravel direction"
-    table1.rows[2].cells[4].text = "工作位移\nWorking travel"
+    table1.rows[2].cells[4].text = "安装/冷态载荷\nCold load"
 
     def safe_str(val):
         return "" if val is None else str(val)
 
-    table1.rows[0].cells[1].text = safe_str(detail[2]) if detail else ""
-    table1.rows[0].cells[3].text = safe_str(detail[5]) if detail else ""
-    table1.rows[0].cells[5].text = safe_str(detail[1]) if detail else ""
+    table1.rows[0].cells[1].text = safe_str(detail[1]) if detail else ""
+    table1.rows[0].cells[3].text = safe_str(detail[6]) if detail else ""
+    table1.rows[0].cells[5].text = safe_str(detail[3]) if detail else ""
 
-    table1.rows[1].cells[1].text = safe_str(detail[3]) if detail else ""
-    table1.rows[1].cells[3].text = safe_str(detail[8]) + "mm" if detail else ""
-    table1.rows[1].cells[5].text = safe_str(detail[6]) + "N" if detail else ""
+    table1.rows[1].cells[1].text = safe_str(detail[5]) if detail else ""
+    table1.rows[1].cells[3].text = safe_str(detail[10]) + "mm" if detail else ""
+    table1.rows[1].cells[5].text = safe_str(detail[8]) + "N" if detail else ""
 
-    table1.rows[2].cells[1].text = safe_str(detail[4]) if detail else ""
+    table1.rows[2].cells[1].text = safe_str(detail[2]) if detail else ""
     table1.rows[2].cells[3].text = safe_str(detail[7]) if detail else ""
-    table1.rows[2].cells[5].text = safe_str(detail[9]) + "mm" if detail else ""
+    table1.rows[2].cells[5].text = safe_str(detail[9]) + "N" if detail else ""
     format_table_cells(table1, font_size=10)
     # 设置第一个表格的上边和左右边加粗
     set_table_border(table1, top=True, left=True, right=True)
@@ -269,12 +278,12 @@ def print_doc(now_handle_data_id=-1, existing_file_path=None):
     for i, width in enumerate(col_widths_top):
         for row in top_table.rows:
             row.cells[i].width = width
-    # 操作员
+    # 试验人员
     top_table.cell(0, 0).merge(top_table.cell(1, 1))
-    top_table.cell(0, 0).text = "操作员\nOperator"
+    top_table.cell(0, 0).text = "试验人员\nOperator"
     # 刘云佳
     top_table.cell(0, 2).merge(top_table.cell(1, 3))
-    top_table.cell(0, 2).text = safe_str(detail[10]) if detail else ""
+    top_table.cell(0, 2).text = safe_str(detail[13]) if detail else ""
     # 实测力值
     top_table.cell(0, 4).merge(top_table.cell(1, 5))
     top_table.cell(0, 4).text = "实测力值\nActual load"
@@ -285,10 +294,10 @@ def print_doc(now_handle_data_id=-1, existing_file_path=None):
     top_table.cell(1, 7).text = str(round(float(pmin) * 1000)) + "N" if detail else ""
     # 检验员
     top_table.cell(0, 8).merge(top_table.cell(1, 9))
-    top_table.cell(0, 8).text = "检验员"
+    top_table.cell(0, 8).text = "批准人员"
     # 陈广春
     top_table.cell(0, 10).merge(top_table.cell(1, 11))
-    top_table.cell(0, 10).text = safe_str(detail[11]) if detail else ""
+    top_table.cell(0, 10).text = safe_str(detail[14]) if detail else ""
     format_table_cells(top_table, font_size=10)
     # 设置这个表格的左右边加粗
     set_table_border(top_table, left=True, right=True)
@@ -300,19 +309,19 @@ def print_doc(now_handle_data_id=-1, existing_file_path=None):
     for i, width in enumerate(main_col_widths):
         for row in main_table.rows:
             row.cells[i].width = width
-    main_table.cell(0, 0).text = "位移起始点值\nInitial point"
-    main_table.cell(0, 1).text = safe_str(detail[12]) + "mm" if detail else ""
-    main_table.cell(0, 2).text = "位移终止点值\nFinishing point"
-    main_table.cell(0, 3).text = safe_str(detail[13]) + "mm" if detail else ""
-    main_table.cell(0, 4).text = "实测位移值\nActual travel"
-    main_table.cell(0, 5).text = safe_str(detail[14]) + "mm" if detail else ""
+    main_table.cell(0, 0).text = "最小位移\nMin travel"
+    main_table.cell(0, 1).text = safe_str(detail[17]) + "mm" if detail else ""
+    main_table.cell(0, 2).text = "最大位移\nMax travel"
+    main_table.cell(0, 3).text = safe_str(detail[19]) + "mm" if detail else ""
+    main_table.cell(0, 4).text = "整定载荷实测值\nActual set load"
+    main_table.cell(0, 5).text = safe_str(detail[15]) + "N" if detail else ""
 
-    main_table.cell(1, 0).text = "超载实验值\nOverload\ntest data"
-    main_table.cell(1, 1).text = safe_str(detail[15]) + "N" if detail else ""
-    main_table.cell(1, 2).text = "超载起始-终止时间\nTime of\nstarting-finishing"
-    main_table.cell(1, 3).text = safe_str(detail[16]) if detail else ""
-    main_table.cell(1, 4).text = "超载实验保持时间\nDuration within\noverload test"
-    main_table.cell(1, 5).text = safe_str(detail[17]) if detail else ""
+    main_table.cell(1, 0).text = "最小位移实测载荷\nMin travel load"
+    main_table.cell(1, 1).text = safe_str(detail[18]) + "N" if detail else ""
+    main_table.cell(1, 2).text = "最大位移实测载荷\nMax travel load"
+    main_table.cell(1, 3).text = safe_str(detail[20]) + "N" if detail else ""
+    main_table.cell(1, 4).text = "载荷偏差度\nLoad deviation"
+    main_table.cell(1, 5).text = safe_str(detail[16]) if detail else ""
     format_table_cells(main_table, font_size=10)
     # 设置这个表格的左右边加粗
     set_table_border(main_table, left=True, right=True)
@@ -323,14 +332,14 @@ def print_doc(now_handle_data_id=-1, existing_file_path=None):
     bottom_col_widths = [Inches(1.1), Inches(0.795), Inches(1.5), Inches(0.425), Inches(1.1), Inches(0.625), Inches(1.5), Inches(0.325)]
     for i, width in enumerate(bottom_col_widths):
         bottom_table.cell(0, i).width = width
-    bottom_table.cell(0, 0).text = "恒定度\nConstant rate"
-    bottom_table.cell(0, 1).text = safe_str(detail[18]) if detail else ""
-    bottom_table.cell(0, 2).text = "锁定位置\nLoad tolerance"
-    bottom_table.cell(0, 3).text = safe_str(detail[19]) if detail else ""
-    bottom_table.cell(0, 4).text = "载荷偏差度\nTest result"
-    bottom_table.cell(0, 5).text = safe_str(detail[20]) if detail else ""
-    bottom_table.cell(0, 6).text = "测试结果\nTest result"
-    bottom_table.cell(0, 7).text = safe_str(detail[21]) if detail else ""
+    bottom_table.cell(0, 0).text = "螺纹尺寸\nThread size"
+    bottom_table.cell(0, 1).text = safe_str(detail[11]) if detail else ""
+    bottom_table.cell(0, 2).text = "弹簧刚度\nSpring stiffness"
+    bottom_table.cell(0, 3).text = safe_str(detail[12]) if detail else ""
+    bottom_table.cell(0, 4).text = "测试结论\nConclusion"
+    bottom_table.cell(0, 5).text = safe_str(detail[21]) if detail else ""
+    bottom_table.cell(0, 6).text = ""
+    bottom_table.cell(0, 7).text = ""
     format_table_cells(bottom_table, font_size=10)
     # 设置最后一个表格的下边和左右边加粗
     set_table_border(bottom_table, bottom=True, left=True, right=True)

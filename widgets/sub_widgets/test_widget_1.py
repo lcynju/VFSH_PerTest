@@ -28,13 +28,17 @@ import random
 
 class TestViewWidget_1(QWidget):
     received_data_changed = pyqtSignal(object)
-    save_data_requested = pyqtSignal()
 
     # 记录表单控件
     inputs = {}
     input_manager = inputManager()
     # 数据库
     DataManager = DataManager()
+    
+    # ！！！！！！！！！！！！需要重点关注的地方：！！！！！！！！！！！！！ - 0410
+    # 这里记录的所有传感器的值都是绝对值；
+    # 只有在展示图上，是减掉了去零的，但是那边到底是否要减，还要和客户确认。
+
     # 最新读取的传感器的值
     _latest_x_value = None
     _latest_y_value = None
@@ -63,6 +67,7 @@ class TestViewWidget_1(QWidget):
 
     def __init__(self):
         super().__init__()
+        self._has_saved = False
         self.plot_widget = pg.PlotWidget()
         # 轴范围变量
         self.current_x_min = 0
@@ -352,18 +357,144 @@ class TestViewWidget_1(QWidget):
         self.cold_step_btn.setEnabled(False)
         self.max_step_btn.setEnabled(True)
 
+    # TODO：最大位移是哪里来的？是输入的冷态位置还是这里记录热态位置？- 0410
     def on_max_step_clicked(self):
+        if self._latest_x_value is not None and self._latest_y_value is not None:
+            # 冷态踩点：整定载荷与位移
+            self._zdwy_x_value_hezai_max = self._latest_x_value
+        else:
+            QMessageBox.warning(self, "提示", "读取最大位移踩点载荷值失败，请重新读取。")
+            return
+        # 显示到面板 label（最大位移实测载荷）
+        w = self.inputs.get("最大位移实测载荷")
+        if isinstance(w, QLabel):
+            w.setText(str(self._zdwy_x_value_hezai_max))
+        # 同步到 input_manager，便于后续入库/打印等逻辑统一取值
+        try:
+            self.input_manager.set_value("最大位移实测载荷", str(self._zdwy_x_value_hezai_max))
+        except Exception:
+            pass
         self.max_step_btn.setEnabled(False)
         self.hot_step_btn.setEnabled(True)
 
     def on_hot_step_clicked(self):
+        if self._latest_x_value is not None and self._latest_y_value is not None:
+            self._rt_x_value_hezai_shice = self._latest_x_value
+            self._rt_y_value_weiyi = self._latest_y_value
+        else:
+            QMessageBox.warning(self, "提示", "读取热态踩点数据失败，请重新读取。")
+            return
+
+        test_date_str = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
+        w_date = self.inputs.get("试验日期")
+        if isinstance(w_date, QLabel):
+            w_date.setText(test_date_str)
+        try:
+            self.input_manager.set_value("试验日期", test_date_str)
+        except Exception:
+            pass
+
+        w_load = self.inputs.get("最大位移实测载荷")
+        if isinstance(w_load, QLabel):
+            w_load.setText(str(self._rt_x_value_hezai_shice))
+        w_travel = self.inputs.get("最大位移")
+        if isinstance(w_travel, QLabel):
+            w_travel.setText(str(self._rt_y_value_weiyi))
+        try:
+            self.input_manager.set_value("最大位移实测载荷", str(self._rt_x_value_hezai_shice))
+            self.input_manager.set_value("最大位移", str(self._rt_y_value_weiyi))
+        except Exception:
+            pass
+
+        # TODO: 占位计算，待确定真实公式后替换
+        computed_load_deviation = "0"
+        computed_spring_stiffness = "2000"
+        w_dev = self.inputs.get("载荷偏差度")
+        if isinstance(w_dev, QLabel):
+            w_dev.setText(computed_load_deviation)
+        w_spring = self.inputs.get("弹簧刚度")
+        if isinstance(w_spring, QLineEdit):
+            w_spring.setText(computed_spring_stiffness)
+        try:
+            self.input_manager.set_value("载荷偏差度", computed_load_deviation)
+            self.input_manager.set_value("弹簧刚度", computed_spring_stiffness)
+        except Exception:
+            pass
+
         self._display_point = False
         self.hot_step_btn.setEnabled(False)
         self.save_data_btn.setEnabled(True)
         self.persist_test_widget_comboboxes()
 
+    def _sync_panel_to_input_manager(self):
+        """把面板上与入库相关的字段同步到 input_manager（与 DataManager.TEST_DETAIL_COLUMNS 一致）。"""
+        for _, input_key in DataManager.TEST_DETAIL_COLUMNS:
+            w = self.inputs.get(input_key)
+            if isinstance(w, QLineEdit):
+                val = w.text()
+            elif isinstance(w, QComboBox):
+                val = w.currentText()
+            elif isinstance(w, QLabel):
+                val = w.text()
+            else:
+                val = self.input_manager.get_value(input_key) or ""
+            self.input_manager.set_value(input_key, val)
+
+    def get_all_data(self):
+        """返回 (input_manager, x_list, y_list, highlight)，供入库与检查。"""
+        return (
+            self.input_manager,
+            list(self._recorded_x_values),
+            list(self._recorded_y_values),
+            list(self._recorded_highlight),
+        )
+
+    def is_data_saved(self):
+        return self._has_saved
+
+    def mark_as_saved(self):
+        self._has_saved = True
+
     def on_save_data_clicked(self):
-        self.save_data_requested.emit()
+        if self.is_data_saved():
+            QMessageBox.warning(
+                self,
+                "提示",
+                "当前测试数据已入库，请勿重复入库。\n如需保存新数据，请先完成新一轮测试流程。",
+            )
+            return
+
+        self._sync_panel_to_input_manager()
+        x_list, y_list, highlight = (
+            self._recorded_x_values,
+            self._recorded_y_values,
+            self._recorded_highlight,
+        )
+        if not x_list or not y_list:
+            QMessageBox.warning(
+                self,
+                "提示",
+                "无法入库：测试数据为空。\n请先完成归零与踩点采集曲线后再入库。",
+            )
+            return
+        if len(x_list) != len(y_list) or len(x_list) == 0:
+            QMessageBox.warning(self, "提示", "无法入库：x、y 坐标点数据异常，请检查测试数据。")
+            return
+        if any(v is None for v in x_list) or any(v is None for v in y_list):
+            QMessageBox.warning(self, "提示", "无法入库：x、y 坐标点不能为空或包含无效值。")
+            return
+
+        last_id = DataManager.save_detail(self.input_manager)
+        DataManager.save_test_data(last_id, x_list, y_list, highlight)
+        self.mark_as_saved()
+        self.save_data_btn.setEnabled(False)
+        self.zz_zero_btn.setEnabled(True)
+
+        mw = self.window()
+        if mw is not None and hasattr(mw, "now_handle_data_id"):
+            mw.now_handle_data_id = last_id
+
+        QMessageBox.information(self, "提示", "入库成功！可以打印或者重新测试。")
 
     def create_chart(self, x: list, y: list, x_center=5000, y_center=5000):
         self.plot_widget = pg.PlotWidget()
@@ -416,7 +547,7 @@ class TestViewWidget_1(QWidget):
         label.setPos(label_x, label_y)
         self.plot_widget.addItem(label)
 
-    def rewrite_chart(self, x: list, y: list, highlight: list, side_right: list):
+    def rewrite_chart(self, x: list, y: list, highlight: list):
         return
 
     def save_high_res_chart(self):

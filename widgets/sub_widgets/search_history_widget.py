@@ -74,6 +74,20 @@ class SearchHistoryWidget(QWidget):
         # 存储主窗口的引用，用于访问test_widget_1
         self.main_window = None
 
+    def apply_current_year_and_search(self):
+        """侧边栏每次打开时：年份对齐系统当前年、按试验日期查全年数据，并刷新表格。"""
+        y = str(datetime.now().year)
+        idx = self.year_box.findText(y)
+        if idx < 0:
+            self.year_box.insertItem(0, y)
+            idx = 0
+        self.year_box.blockSignals(True)
+        self.year_box.setCurrentIndex(idx)
+        self.year_box.blockSignals(False)
+        self.query_mode.setCurrentIndex(0)
+        self.search_box.clear()
+        self.handle_search()
+
     def handle_cell_click(self, row, column):
         """处理单元格点击事件，若点击的是文件链接列，则打开文件所在目录"""
         if column == 3:  # 文件链接列
@@ -154,12 +168,32 @@ class SearchHistoryWidget(QWidget):
         else:
             result = DataManager.queryByYear(year)
 
-        # print(result, year, keyword)
-        # 返回 [试验日期, 用户, 出厂编号, id, file_path]
-        return [
-            [row[1], row[2], row[4], row[0], row[22] if len(row) > 22 else None]
-            for row in result
-        ]
+        # test_detail SELECT 顺序见 DataManager.TEST_DETAIL_SELECT_COLS:
+        # 0 test_id
+        # 1 project_name
+        # 2 factory_number
+        # 3 test_date
+        # 4 pipeline_name
+        # 5 line_hanger_no
+        # 6 spec_model
+        # 7 travel_direction
+        # 8 working_load_n
+        # 9 install_cold_load_n
+        # 10 install_cold_pos_mm
+        # 11 thread_size_m
+        # 12 spring_stiffness
+        # 13 tester
+        # 14 approver
+        # 15 set_load_actual_n
+        # 16 load_deviation
+        # 17 min_travel_mm
+        # 18 min_travel_load_n
+        # 19 max_travel_mm
+        # 20 max_travel_load_n
+        # 21 test_conclusion
+        # 22 file_path
+        # 返回 [试验日期, 试验人员, 出厂编号, test_id, file_path]
+        return [[row[3], row[13], row[2], row[0], row[22]] for row in result]
         
     def on_import_clicked(self):
         """处理导入按钮点击事件"""
@@ -172,7 +206,7 @@ class SearchHistoryWidget(QWidget):
                 # 从数据库查询该ID的详细数据
                 detail_data = DataManager.queryById(int(data_id))
                 # 查询该ID的测试数据
-                x_list, y_list, highlight, side_right = DataManager.queryTestDataByFormId(int(data_id))
+                x_list, y_list, highlight = DataManager.queryTestDataByFormId(int(data_id))
                 
                 # 显示导入成功的提示
                 from PyQt5.QtWidgets import QMessageBox
@@ -186,67 +220,58 @@ class SearchHistoryWidget(QWidget):
                     
                     # 填充表单数据
                     if detail_data:
-                        # 试验时间
-                        if hasattr(test_widget, 'time_input'):
-                            test_widget.time_input.setText(detail_data[1])
-                        # 用户
-                        if detail_data[2] and "用户" in test_widget.inputs:
-                            test_widget.inputs["用户"].setCurrentText(detail_data[2])
-                        # 吊点代号
-                        if detail_data[3] and "吊点代号" in test_widget.inputs:
-                            test_widget.inputs["吊点代号"].setCurrentText(detail_data[3])
-                        # 出厂编号
-                        if detail_data[4] and "出厂编号" in test_widget.inputs:
-                            test_widget.inputs["出厂编号"].setText(detail_data[4])
-                        # 型号规格
-                        if detail_data[5] and "型号规格" in test_widget.inputs:
-                            test_widget.inputs["型号规格"].setText(detail_data[5])
-                        # 工作载荷
-                        if detail_data[6] and "工作载荷" in test_widget.inputs:
-                            test_widget.inputs["工作载荷"].setText(detail_data[6])
-                        # 位移方向
-                        if detail_data[7] and "位移方向" in test_widget.inputs:
-                            test_widget.inputs["位移方向"].setCurrentText(detail_data[7])
-                        # 总位移
-                        if detail_data[8] and "总位移" in test_widget.inputs:
-                            test_widget.inputs["总位移"].setText(detail_data[8])
-                        # 工作位移
-                        if detail_data[9] and "工作位移" in test_widget.inputs:
-                            test_widget.inputs["工作位移"].setText(detail_data[9])
-                        # 操作员
-                        if detail_data[10] and "操作员" in test_widget.inputs:
-                            test_widget.inputs["操作员"].setCurrentText(detail_data[10])
-                        # 检验员
-                        if detail_data[11] and "检验员" in test_widget.inputs:
-                            test_widget.inputs["检验员"].setCurrentText(detail_data[11])
-                        # 其他字段...
-                        fields = [
-                            (12, "位移起始点值"), (13, "位移终止点值"), (14, "实测位移值"),
-                            (15, "超载试验值"), (16, "起始-终止时间"), (17, "超载试验保持时间"),
-                            (18, "恒定度"), (19, "锁定位置"), (20, "载荷偏差度")
-                        ]
-                        for idx, field_name in fields:
-                            if detail_data[idx] and field_name in test_widget.inputs:
-                                test_widget.inputs[field_name].setText(detail_data[idx])
-                        if detail_data[21]:
-                            test_widget.inputs["测试结果"].setText(detail_data[21])
-                        else:
-                            test_widget.inputs["测试结果"].setText("无结果")
-                        #传入导入数据的文件路径，便于直接打印文件
-                        test_widget._existing_file_path = None
-                        if detail_data[22]:
-                            test_widget._existing_file_path = detail_data[22]
+                        mapped = {
+                            "工程名称": detail_data[1],
+                            "出厂编号": detail_data[2],
+                            "试验日期": detail_data[3],
+                            "管系名称": detail_data[4],
+                            "管线号-支吊点号": detail_data[5],
+                            "规格型号": detail_data[6],
+                            "位移方向": detail_data[7],
+                            "工作载荷": detail_data[8],
+                            "安装冷态载荷": detail_data[9],
+                            "安装冷态位置": detail_data[10],
+                            "螺纹尺寸": detail_data[11],
+                            "弹簧刚度": detail_data[12],
+                            "试验人员": detail_data[13],
+                            "批准人员": detail_data[14],
+                            "整定载荷实测值": detail_data[15],
+                            "载荷偏差度": detail_data[16],
+                            "最小位移": detail_data[17],
+                            "最小位移实测载荷": detail_data[18],
+                            "最大位移": detail_data[19],
+                            "最大位移实测载荷": detail_data[20],
+                            "测试结论": detail_data[21],
+                        }
+                        for k, v in mapped.items():
+                            if k not in test_widget.inputs:
+                                continue
+                            w = test_widget.inputs[k]
+                            if v is None:
+                                v = ""
+                            try:
+                                from PyQt5.QtWidgets import QLineEdit, QComboBox, QLabel
+                                if isinstance(w, QLineEdit):
+                                    w.setText(str(v))
+                                elif isinstance(w, QComboBox):
+                                    w.setCurrentText(str(v))
+                                elif isinstance(w, QLabel):
+                                    w.setText(str(v))
+                            except Exception:
+                                pass
+
+                        # 传入导入数据的文件路径，便于直接打印文件
+                        test_widget._existing_file_path = detail_data[22]
                     
-                    if detail_data[22] == None:
+                    if (detail_data is not None) and (detail_data[22] is None):
                         test_widget._record_dot_x = x_list
                         test_widget._record_dot_y = y_list
                         test_widget._record_dot_highlight = highlight
-                        test_widget._record_dot_side = side_right
                         test_widget.save_high_res_chart()
                         
                     # 更新图表数据
                     if hasattr(test_widget, 'rewrite_chart'):
-                        test_widget.rewrite_chart(x_list, y_list, highlight, side_right)
+                        test_widget.rewrite_chart(x_list, y_list, highlight)
                         
                     # 设置当前处理的数据ID，便于后续打印
                     self.main_window.now_handle_data_id = int(data_id)

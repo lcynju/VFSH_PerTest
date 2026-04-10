@@ -60,7 +60,6 @@ class MainWindow(QMainWindow):
         self.toolbar = ToolBarWidget()
         self.toolbar.history_visible.connect(self.history_visible)
         self.toolbar.clear_panel_clicked.connect(self.on_clear_panel)
-        self.chart_widget1.save_data_requested.connect(self.save_data)
         self.toolbar.print_btn.clicked.connect(self.handle_print_doc)
         self.toolbar.menu_btn.print_doc_signal.connect(lambda _: self.handle_print_doc())  # 菜单打印与工具栏打印同功能
         self.toolbar.menu_btn.config_clicked.connect(self.show_config_dialog)
@@ -100,7 +99,7 @@ class MainWindow(QMainWindow):
             QMessageBox.warning(self, "提示", "无法打印：请先入库后再打印。")
             return
         # 2. 测试数据（x、y）非空检查
-        x_list, y_list, highlight, side_right = DataManager.queryTestDataByFormId(self.now_handle_data_id)
+        x_list, y_list, highlight = DataManager.queryTestDataByFormId(self.now_handle_data_id)
         if not x_list or not y_list:
             QMessageBox.warning(self, "提示", "无法打印：该记录没有测试数据（x、y 坐标点为空），无法生成报表。")
             return
@@ -135,8 +134,10 @@ class MainWindow(QMainWindow):
     #     self.stack.setCurrentIndex(2)
     #
     def history_visible(self):
-        self.search_history_widget.handle_search()
-        self.dock.setVisible(not self.dock.isVisible())
+        opening = not self.dock.isVisible()
+        if opening:
+            self.search_history_widget.apply_current_year_and_search()
+        self.dock.setVisible(opening)
 
     def on_clear_panel(self):
         """处理清空面板按钮点击"""
@@ -147,7 +148,6 @@ class MainWindow(QMainWindow):
         chart_widget1._record_dot_x = []
         chart_widget1._record_dot_y = []
         chart_widget1._record_dot_highlight = []
-        chart_widget1._record_dot_side = []
         chart_widget1._has_saved = False  # 新测试开始，重置入库标记
             # 重置去0逻辑相关变量
         chart_widget1._y_start = None
@@ -187,36 +187,6 @@ class MainWindow(QMainWindow):
     def show_config_dialog(self):
         dialog = ConfigDialog(self)
         dialog.exec_()
-
-    def save_data(self):
-        # 1. 重复入库检查
-        if self.chart_widget1.is_data_saved():
-            QMessageBox.warning(self, "提示", "当前测试数据已入库，请勿重复入库。\n如需保存新数据，请先点击「开始」进行新一轮测试。")
-            return
-
-        data = self.chart_widget1.get_all_data()
-        x_list, y_list, highlight, side_right = data[1], data[2], data[3], data[4]
-
-        # 2. 数据检查：x、y 坐标点不能为空
-        if not x_list or not y_list:
-            QMessageBox.warning(self, "提示", "无法入库：测试数据为空。\n请先进行测试（点击「开始」并完成数据采集）后再入库。")
-            return
-        if len(x_list) != len(y_list) or len(x_list) == 0:
-            QMessageBox.warning(self, "提示", "无法入库：x、y 坐标点数据异常，请检查测试数据。")
-            return
-        # 检查是否存在空值或无效值
-        if any(v is None for v in x_list) or any(v is None for v in y_list):
-            QMessageBox.warning(self, "提示", "无法入库：x、y 坐标点不能为空或包含无效值。")
-            return
-
-        # print("get data", data)
-        last_id = DataManager.save_detail(data[0])
-        self.now_handle_data_id = last_id
-        DataManager.save_test_data(last_id, x_list, y_list, highlight, side_right)
-        self.chart_widget1.mark_as_saved()
-
-        # 3. 入库成功提示
-        QMessageBox.information(self, "提示", "入库成功！")
 
     def calculate_constancy(self, points):
         maxP = max(points)
