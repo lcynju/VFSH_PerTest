@@ -65,6 +65,33 @@ class TestViewWidget_1(QWidget):
     _previous_highlight_y = None
     _highlight_threshold = 15
 
+    _existing_file_path = None
+
+    # 与 create_left_form 一致，供重置面板时恢复默认值
+    PANEL_TABLE_ROWS = (
+        ("工程名称", "工程名称", "combobox", {}),
+        ("出厂编号", "出厂编号", "lineedit", "20260322001"),
+        ("试验日期", "试验日期", "label", "2026-03-22"),
+        ("管系名称", "管系名称", "lineedit", "测试管系"),
+        ("管线号-支吊点号：", "管线号-支吊点号", "combobox", {}),
+        ("规格型号", "规格型号", "lineedit", "测试规格"),
+        ("位移方向", "位移方向", "combobox", {}),
+        ("工作/热态载荷（N）", "工作载荷", "lineedit", "1223"),
+        ("安装/冷态载荷（N）", "安装冷态载荷", "lineedit", "3233"),
+        ("安装/冷态位置（mm）", "安装冷态位置", "lineedit", "200"),
+        ("螺纹尺寸（M）", "螺纹尺寸", "lineedit", "0.3"),
+        ("弹簧刚度", "弹簧刚度", "lineedit", "2000"),
+        ("试验人员", "试验人员", "combobox", {}),
+        ("批准人员", "批准人员", "combobox", {}),
+        ("整定载荷实测值（N）", "整定载荷实测值", "label", None),
+        ("载荷偏差度", "载荷偏差度", "label", None),
+        ("最小位移（mm）", "最小位移", "label", None),
+        ("最小位移实测载荷（N）", "最小位移实测载荷", "label", None),
+        ("最大位移（mm）", "最大位移", "label", None),
+        ("最大位移实测载荷（N）", "最大位移实测载荷", "label", None),
+        ("测试结论", "测试结论", "label", None),
+    )
+
     def __init__(self):
         super().__init__()
         self._has_saved = False
@@ -150,29 +177,7 @@ class TestViewWidget_1(QWidget):
 
         # 所有表单字段统一放入表格（两列：名称 + 值）
         # 每项: (标签文本, 存储key, 控件类型, 可选配置)
-        table_rows = [
-            ("工程名称", "工程名称", "combobox", {}),
-            ("出厂编号", "出厂编号", "lineedit", "20260322001"),
-            ("试验日期", "试验日期", "label", "2026-03-22"),
-            ("管系名称", "管系名称", "lineedit", "测试管系"),
-            ("管线号-支吊点号：", "管线号-支吊点号", "combobox", {}),
-            ("规格型号", "规格型号", "lineedit", "测试规格"),
-            ("位移方向", "位移方向", "combobox", {}),
-            ("工作/热态载荷（N）", "工作载荷", "lineedit", "1223"),
-            ("安装/冷态载荷（N）", "安装冷态载荷", "lineedit", "3233"),
-            ("安装/冷态位置（mm）", "安装冷态位置", "lineedit", "200"),
-            ("螺纹尺寸（M）", "螺纹尺寸", "lineedit", "0.3"),
-            ("弹簧刚度", "弹簧刚度", "lineedit", "2000"),
-            ("试验人员", "试验人员", "combobox", {}),
-            ("批准人员", "批准人员", "combobox", {}),
-            ("整定载荷实测值（N）", "整定载荷实测值", "label", None),
-            ("载荷偏差度", "载荷偏差度", "label", None),
-            ("最小位移（mm）", "最小位移", "label", None),
-            ("最小位移实测载荷（N）", "最小位移实测载荷", "label", None),
-            ("最大位移（mm）", "最大位移", "label", None),
-            ("最大位移实测载荷（N）", "最大位移实测载荷", "label", None),
-            ("测试结论", "测试结论", "label", None),
-        ]
+        table_rows = self.PANEL_TABLE_ROWS
         result_table = QTableWidget(len(table_rows), 2)
         result_table.horizontalHeader().setVisible(False)
         result_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents)
@@ -232,6 +237,79 @@ class TestViewWidget_1(QWidget):
         self.bind_signals()
 
         return form_layout
+
+    def _apply_panel_field_defaults(self):
+        """将表单控件与 input_manager 恢复为 PANEL_TABLE_ROWS 中的初始值。"""
+        for item in self.PANEL_TABLE_ROWS:
+            _, key, widget_type, cfg = item if len(item) == 4 else (*item[:3], None)
+            w = self.inputs.get(key)
+            if w is None:
+                continue
+            if widget_type == "lineedit":
+                text = str(cfg) if cfg is not None else ""
+                w.setText(text)
+                inputManager.set_value(self.input_manager, key, text)
+            elif widget_type == "combobox":
+                items, default_text = get_test_widget_1_combobox(key)
+                w.clear()
+                w.addItems(items)
+                w.setCurrentText(default_text)
+                if w.lineEdit():
+                    w.lineEdit().setAlignment(Qt.AlignCenter)
+                inputManager.set_value(self.input_manager, key, default_text)
+            else:
+                w.setText("")
+                inputManager.set_value(self.input_manager, key, "")
+
+    def reset_panel_to_initial_state(self):
+        """清空面板：将表单、绘图区与测试流程相关变量恢复为与新建界面一致。"""
+        self._has_saved = False
+        self._existing_file_path = None
+
+        self._latest_x_value = None
+        self._latest_y_value = None
+        self._zzgl_x_value = None
+        self._wzgl_y_value = None
+        self._wzgl_x_value_hezai_min = None
+        self._lt_x_value_hezai_zhengding = None
+        self._lt_y_value_weiyi = None
+        self._zdwy_x_value_hezai_max = None
+        self._rt_x_value_hezai_shice = None
+        self._rt_y_value_weiyi = None
+
+        self._display_point = False
+        self._recorded_x_values = []
+        self._recorded_y_values = []
+        self._recorded_highlight = []
+        self._previous_highlight_y = None
+
+        self._rewrite_chart_highlight_items = []
+
+        self.current_x_min = 0
+        self.current_x_max = 200
+        self.current_y_min = 0
+        self.current_y_max = 500
+
+        if hasattr(self, "plot_widget"):
+            self.plot_widget.clear()
+            self.curve = self.plot_widget.plot(
+                [], [],
+                pen='b',
+                symbol='o',
+                symbolSize=0.5,
+                symbolBrush='b'
+            )
+            self.plot_widget.setXRange(self.current_x_min, self.current_x_max)
+            self.plot_widget.setYRange(self.current_y_min, self.current_y_max)
+
+        self.zz_zero_btn.setEnabled(True)
+        self.wz_zero_btn.setEnabled(False)
+        self.cold_step_btn.setEnabled(False)
+        self.max_step_btn.setEnabled(False)
+        self.hot_step_btn.setEnabled(False)
+        self.save_data_btn.setEnabled(False)
+
+        self._apply_panel_field_defaults()
 
     # 记录表单内容
     def bind_signals(self):
@@ -312,11 +390,6 @@ class TestViewWidget_1(QWidget):
             QMessageBox.warning(self, "提示", "读取位置清零位置值失败，请重新读取。")
             return
         
-        base = float(self.input_manager.get_value("工作载荷"))/1000
-        line1 = InfiniteLine(pos=base * 1.06, angle=90, pen='r')
-        line2 = InfiniteLine(pos=base * 0.94, angle=90, pen='g')
-        self.plot_widget.addItem(line1)
-        self.plot_widget.addItem(line2)
         self._display_point = True
 
         self.wz_zero_btn.setEnabled(False)
@@ -376,7 +449,8 @@ class TestViewWidget_1(QWidget):
             pass
         self.max_step_btn.setEnabled(False)
         self.hot_step_btn.setEnabled(True)
-
+    
+    # TODO：每次点击热态踩点后表示测试结束，则需要计算所有需要的结果，并得到最终的测试结论 - 0411
     def on_hot_step_clicked(self):
         if self._latest_x_value is not None and self._latest_y_value is not None:
             self._rt_x_value_hezai_shice = self._latest_x_value
@@ -489,6 +563,7 @@ class TestViewWidget_1(QWidget):
         self.mark_as_saved()
         self.save_data_btn.setEnabled(False)
         self.zz_zero_btn.setEnabled(True)
+        self.save_high_res_chart()
 
         mw = self.window()
         if mw is not None and hasattr(mw, "now_handle_data_id"):
@@ -496,6 +571,7 @@ class TestViewWidget_1(QWidget):
 
         QMessageBox.information(self, "提示", "入库成功！可以打印或者重新测试。")
 
+    # 在测试过程中，用来创建图表
     def create_chart(self, x: list, y: list, x_center=5000, y_center=5000):
         self.plot_widget = pg.PlotWidget()
         self.plot_widget.setBackground('w')
@@ -518,40 +594,125 @@ class TestViewWidget_1(QWidget):
         self.plot_widget.setXRange(self.current_x_min, self.current_x_max)
         self.plot_widget.setYRange(self.current_y_min, self.current_y_max)
 
-
+    # 在测试过程中，用来更新图上的点数据
     def update_chart(self, x: list, y: list):
         if hasattr(self, 'curve'):
             self.curve.setData(x, y)
 
 
-    def highlight_plot(self, x: float, y: float):
-        highlight = pg.ScatterPlotItem(
+    def _create_highlight_plot_items(self, x: float, y: float):
+        """创建与 highlight_plot 相同样式的散点与标签（由调用方 addItem）。"""
+        scatter = pg.ScatterPlotItem(
             [x], [y],
             symbol='o',
             size=7,
             brush='r',
             pen='k'
         )
-        self.plot_widget.addItem(highlight)
-
-        # 获取当前视图范围
         view_range = self.plot_widget.getViewBox().viewRange()
         x_range = view_range[0]
         y_range = view_range[1]
-        x_offset = (x_range[1] - x_range[0]) * 0.03  # 3%的x轴范围
+        x_offset = (x_range[1] - x_range[0]) * 0.03
         y_offset = (y_range[1] - y_range[0]) * 0.03
         label_x = x + x_offset
         label_y = y + y_offset
-
         label = TextItem(f"{x:.3f}", anchor=(0.5, 1), color=(0, 0, 0))
         label.setPos(label_x, label_y)
-        self.plot_widget.addItem(label)
+        return scatter, label
 
-    def rewrite_chart(self, x: list, y: list, highlight: list):
-        return
+    # 在测试过程中，用来在图上绘制高亮的点以及它的标签
+    def highlight_plot(self, x: float, y: float):
+        scatter, label = self._create_highlight_plot_items(x, y)
+        self.plot_widget.addItem(scatter)
+        self.plot_widget.addItem(label)
+    
+    # 在导入数据的时候调用，用来在界面上绘制所有点，包括高亮的点
+    def rewrite_chart(self):
+        if not hasattr(self, 'plot_widget'):
+            return
+
+        # 清空散点、标签等所有项，否则会保留上一次高亮
+        self.plot_widget.clear()
+        self.curve = self.plot_widget.plot(
+            [], [],
+            pen='b',
+            symbol='o',
+            symbolSize=0.5,
+            symbolBrush='b'
+        )
+
+        if not self._recorded_x_values or not self._recorded_y_values or len(self._recorded_x_values) != len(self._recorded_y_values):
+            return
+
+        self.curve.setData(self._recorded_x_values, self._recorded_y_values)
+        
+        hl = self._recorded_highlight if self._recorded_highlight is not None else []
+        n = len(self._recorded_x_values)
+        if len(hl) < n:
+            hl = list(hl) + [False] * (n - len(hl))
+        else:
+            hl = hl[:n]
+        
+        for i in range(n):
+            if hl[i]:
+                scatter, label = self._create_highlight_plot_items(float(self._recorded_x_values[i]), float(self._recorded_y_values[i]))
+                self.plot_widget.addItem(scatter)
+                self.plot_widget.addItem(label)
 
     def save_high_res_chart(self):
-        return
+        """使用matplotlib重新绘制图表并保存为高质量PNG"""
+        # 设置matplotlib支持中文显示（按平台选择已安装字体，避免 findfont 警告）
+        if sys.platform.startswith("win"):
+            plt.rcParams["font.family"] = ["SimHei", "SimSun", "Microsoft YaHei"]
+        else:
+            plt.rcParams["font.family"] = ["SimHei", "WenQuanYi Micro Hei", "Heiti TC"]
+
+        # 创建matplotlib图表
+        fig, ax = plt.subplots(figsize=(10, 8), dpi=300)  # 设置高DPI以获得更高质量
+
+        # 绘制连线
+        ax.plot(self._recorded_x_values, self._recorded_y_values, color='blue', linewidth=0.8, alpha=0.7)
+        # 绘制数据点
+        ax.scatter(self._recorded_x_values, self._recorded_y_values, color='blue', s=0.5, alpha=0.7)
+
+        hl = self._recorded_highlight if self._recorded_highlight is not None else []
+        n = len(self._recorded_x_values)
+        if len(hl) < n:
+            hl = list(hl) + [False] * (n - len(hl))
+        else:
+            hl = hl[:n]
+        
+        for i in range(n):
+            if hl[i]:
+                ax.scatter(self._recorded_x_values[i], self._recorded_y_values[i], color='red', s=15, edgecolor='black', alpha=1.0)
+                ax.text(self._recorded_x_values[i], self._recorded_y_values[i], f'{self._recorded_x_values[i]:.3f}', fontsize=14, ha='center', va='top', color='black')
+        
+        # 设置坐标轴标签和标题（增大字号确保打印可读）
+        ax.set_title("载荷-位移特性曲线图\nLoad-Travel Performance Curve", color='purple', fontsize=16)
+        ax.set_xlabel('载荷Load(kN)', fontsize=14)
+        ax.set_ylabel('位移Travel(mm)', fontsize=14)
+        ax.tick_params(axis='both', labelsize=14)
+        # 将x轴移到上方
+        ax.xaxis.tick_top()
+        ax.xaxis.set_label_position('top')
+        ax.tick_params(axis='x', bottom=False, top=True, labelbottom=False, labeltop=True)
+        
+        # 设置坐标轴范围
+        ax.set_xlim(self.current_x_min, self.current_x_max)
+        ax.set_ylim(self.current_y_min, self.current_y_max)
+        
+        # 设置y轴为0在上（反转y轴）
+        ax.invert_yaxis()
+        
+        # 添加网格线
+        ax.grid(True, linestyle='--', alpha=0.7)
+        
+        # 调整布局
+        plt.tight_layout()
+        
+        # 保存为PNG文件
+        plt.savefig('./resources/png.png', dpi=300, bbox_inches='tight')
+        plt.close(fig)  # 关闭图表以释放内存
         
     def set_x_range(self, x_min, x_max):
         self.current_x_min = x_min

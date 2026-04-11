@@ -140,49 +140,9 @@ class MainWindow(QMainWindow):
         self.dock.setVisible(opening)
 
     def on_clear_panel(self):
-        """处理清空面板按钮点击"""
-        chart_widget1 = self.chart_widget1
+        """处理清空面板按钮点击：由测试页控件自身恢复初始状态。"""
         self.now_handle_data_id = -1
-        # 清空原先数据
-        chart_widget1._cnt_receive_dot = 0
-        chart_widget1._record_dot_x = []
-        chart_widget1._record_dot_y = []
-        chart_widget1._record_dot_highlight = []
-        chart_widget1._has_saved = False  # 新测试开始，重置入库标记
-            # 重置去0逻辑相关变量
-        chart_widget1._y_start = None
-        chart_widget1._has_recorded_start = False
-        # 重置U型曲线标签方向控制变量
-        chart_widget1._label_direction = "right"  # 初始设为右侧
-        chart_widget1._previous_x_for_direction = None
-        chart_widget1._direction_switched = False  # 重置切换标记
-        chart_widget1._existing_file_path = None
-        # 初始化基于工作位移的高亮点控制变量
-        try:
-            chart_widget1._highlight_step = 15
-            chart_widget1._y_start_value = None  # 将在第一个数据点记录
-            chart_widget1._y_max_value = None  # 将在测试过程中更新
-            chart_widget1._highlighted_displacements = set()  # 已打点的位移值集合
-            chart_widget1._is_increasing_phase = True  # 初始为增加阶段（压的过程）
-            chart_widget1._previous_y = None  # 上一个y值
-            chart_widget1.stack_cnt = []  # 用于记录拉过程中打点位置
-        except (ValueError, TypeError):
-            chart_widget1._highlight_step = None
-            chart_widget1._working_displacement = None
-            chart_widget1._max_highlight_count = 10
-            chart_widget1.stack_cnt = []
-            
-        chart_widget1.plot_widget.clear()
-        chart_widget1.curve = chart_widget1.plot_widget.plot([], [], pen='b', symbol='o', symbolSize=5, symbolBrush='b')
-        chart_widget1.restart = False
-
-        chart_widget1.time_input.setText("")
-        chart_widget1.input_manager.set_value("试验时间", "")
-        for key in ["工作位移", "出厂编号", "工作载荷", "恒定度", "总位移", "位移终止点值", "位移起始点值", "实测位移值", "载荷偏差度", "超载试验值", "起始-终止时间", "超载试验保持时间", "锁定位置", "测试结果"]:
-            chart_widget1.inputs[key].setText("")
-            chart_widget1.input_manager.set_value(key, "")
-        # 清空面板后重新启用开始按钮
-        chart_widget1.wz_zero_btn.setEnabled(True)
+        self.chart_widget1.reset_panel_to_initial_state()
 
     def show_config_dialog(self):
         dialog = ConfigDialog(self)

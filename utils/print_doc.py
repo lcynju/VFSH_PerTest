@@ -200,57 +200,82 @@ def print_doc(now_handle_data_id=-1, existing_file_path=None):
     add_centered_text_with_simsun("Jiangsu Huitong PiPeline Equipment Co.Ltd.", font_size=14)
 
     # 添加主标题（大号宋体，加粗）
-    add_centered_text_with_simsun("恒力吊架性能试验记录", font_size=20, bold=True, style='Heading 1')
+    add_centered_text_with_simsun("变力弹簧支吊架性能试验记录", font_size=20, bold=True, style='Heading 1')
 
     # 添加英文副标题（正常宋体）
-    add_centered_text_with_simsun("Constant Hanger Performance Test Record", font_size=12)
+    add_centered_text_with_simsun("Variable Force Spring Hanger Performance Test Record", font_size=12)
 
     # 添加基本信息表格
-    table1 = doc.add_table(rows=3, cols=6)
+    table1 = doc.add_table(rows=3, cols=8)
     table1.style = 'Table Grid'
-    col_widths = [Inches(1.05), Inches(0.87), Inches(1.85), Inches(1.1), Inches(1.4), Inches(1.1)]
+    col_widths = [Inches(1), Inches(1), Inches(1), Inches(1), Inches(1), Inches(1), Inches(1),Inches(1)]
     for i, width in enumerate(col_widths):
         for row in table1.rows:
             row.cells[i].width = width
 
+    _r0 = table1.rows[0]
+    _r0.cells[1].merge(_r0.cells[2])
+    _r0.cells[1].merge(_r0.cells[2])
+
     # detail 字段顺序见 DataManager.TEST_DETAIL_SELECT_COLS（test_detail）
-    table1.rows[0].cells[0].text = "用户\nCustomer"
-    table1.rows[0].cells[2].text = "规格型号\nDescription and type"
-    table1.rows[0].cells[4].text = "试验日期\nTest Date"
-    # 第二行内容 吊点代号 总位移 工作载荷
-    table1.rows[1].cells[0].text = "管线号-支吊点号\nHanger Number"
-    table1.rows[1].cells[2].text = "安装/冷态位置\nCold position"
-    table1.rows[1].cells[4].text = "工作载荷\nWorking Load"
-    # 第三行内容 出场编号 位移方向 工作位移
-    table1.rows[2].cells[0].text = "出厂编号\nSerial Number"
-    table1.rows[2].cells[2].text = "位移方向\nTravel direction"
-    table1.rows[2].cells[4].text = "安装/冷态载荷\nCold load"
+    # 第一行内容 工程名称 出厂编号 试验日期
+    table1.rows[0].cells[0].text = "工程名称"
+    table1.rows[0].cells[4].text = "出厂编号"
+    table1.rows[0].cells[6].text = "试验日期"
+    # 第二行内容 管系名称 管线号-支吊点号 规格型号 位移方向(+/-)
+    table1.rows[1].cells[0].text = "管系名称"
+    table1.rows[1].cells[2].text = "管线号-支吊点号"
+    table1.rows[1].cells[4].text = "规格型号"
+    table1.rows[1].cells[6].text = "位移方向(+/-)"
+    # 第三行内容 工作/热态载荷 安装/冷态载荷 安装/冷态位置 螺纹尺寸
+    table1.rows[2].cells[0].text = "工作/热态载荷(N)"
+    table1.rows[2].cells[2].text = "安装/冷态载荷(N)"
+    table1.rows[2].cells[4].text = "安装/冷态位置(mm)"
+    table1.rows[2].cells[6].text = "螺纹尺寸(M)"
 
     def safe_str(val):
         return "" if val is None else str(val)
 
-    table1.rows[0].cells[1].text = safe_str(detail[1]) if detail else ""
-    table1.rows[0].cells[3].text = safe_str(detail[6]) if detail else ""
-    table1.rows[0].cells[5].text = safe_str(detail[3]) if detail else ""
+    # detail[0]=test_id, [1]工程名称…[21]测试结论, [22]=file_path（见 data_manager.TEST_DETAIL_COLUMNS）
+    if detail:
+        table1.rows[0].cells[1].text = safe_str(detail[1])
+        table1.rows[0].cells[5].text = safe_str(detail[2])
+        table1.rows[0].cells[7].text = safe_str(detail[3])
 
-    table1.rows[1].cells[1].text = safe_str(detail[5]) if detail else ""
-    table1.rows[1].cells[3].text = safe_str(detail[10]) + "mm" if detail else ""
-    table1.rows[1].cells[5].text = safe_str(detail[8]) + "N" if detail else ""
+        table1.rows[1].cells[1].text = safe_str(detail[4])
+        table1.rows[1].cells[3].text = safe_str(detail[5])
+        table1.rows[1].cells[5].text = safe_str(detail[6])
+        table1.rows[1].cells[7].text = safe_str(detail[7])
 
-    table1.rows[2].cells[1].text = safe_str(detail[2]) if detail else ""
-    table1.rows[2].cells[3].text = safe_str(detail[7]) if detail else ""
-    table1.rows[2].cells[5].text = safe_str(detail[9]) + "N" if detail else ""
+        table1.rows[2].cells[1].text = safe_str(detail[8])
+        table1.rows[2].cells[3].text = safe_str(detail[9])
+        table1.rows[2].cells[5].text = safe_str(detail[10])
+        table1.rows[2].cells[7].text = safe_str(detail[11])
+    else:
+        table1.rows[0].cells[1].text = ""
+        table1.rows[0].cells[5].text = ""
+        table1.rows[0].cells[7].text = ""
+        table1.rows[1].cells[1].text = ""
+        table1.rows[1].cells[3].text = ""
+        table1.rows[1].cells[5].text = ""
+        table1.rows[1].cells[7].text = ""
+        table1.rows[2].cells[1].text = ""
+        table1.rows[2].cells[3].text = ""
+        table1.rows[2].cells[5].text = ""
+        table1.rows[2].cells[7].text = ""
     format_table_cells(table1, font_size=10)
     # 设置第一个表格的上边和左右边加粗
     set_table_border(table1, top=True, left=True, right=True)
 
+
     # 添加一个 1x1 的表格
-    table = doc.add_table(rows=1, cols=1)
-    table.style = 'Table Grid'
+    table2 = doc.add_table(rows=1, cols=1)
+    table2.cell(0,0).width = Inches(8)
+    table2.style = 'Table Grid'
     # 设置这个表格的左右边加粗
-    set_table_border(table, left=True, right=True)
+    set_table_border(table2, left=True, right=True)
     # 获取单元格
-    cell = table.cell(0, 0)
+    cell = table2.cell(0, 0)
     # 在单元格内添加图片
     paragraph = cell.paragraphs[0]  # 获取单元格内的段落
     picture = paragraph.add_run().add_picture('./resources/png.png', width=Inches(7))
@@ -259,90 +284,91 @@ def print_doc(now_handle_data_id=-1, existing_file_path=None):
     paragraph_format.space_before = Pt(4)
     paragraph_format.space_after = Pt(4)  # 减小间距，避免内容溢出产生空白第二页
 
-
-
-    # 使用前面已查询的 test_data 用于 Pmax/Pmin
-    def format_float(val):
-        try:
-            return f"{float(val):.3f}"
-        except Exception:
-            return safe_str(val)
-
-    pmax = format_float(max(x_list)) if x_list else ""
-    pmin = format_float(min(x_list)) if x_list else ""
-
-    # 第一行单独为2x12表格，横向排列6个2x2小表格
-    top_table = doc.add_table(rows=2, cols=12)
-    top_table.style = 'Table Grid'
-    col_widths_top = [Inches(0.525), Inches(0.525), Inches(0.435), Inches(0.435), Inches(0.625), Inches(0.625),Inches(0.45), Inches(0.45), Inches(1.0), Inches(1.0), Inches(0.7), Inches(0.7)]
-    for i, width in enumerate(col_widths_top):
-        for row in top_table.rows:
+    # 第三个表格为6*8
+    table3 = doc.add_table(rows=6, cols=8)
+    table3.style = 'Table Grid'
+    col_widths = [Inches(1), Inches(1), Inches(1), Inches(1), Inches(1), Inches(1), Inches(1),Inches(1)]
+    for i, width in enumerate(col_widths):
+        for row in table3.rows:
             row.cells[i].width = width
-    # 试验人员
-    top_table.cell(0, 0).merge(top_table.cell(1, 1))
-    top_table.cell(0, 0).text = "试验人员\nOperator"
-    # 刘云佳
-    top_table.cell(0, 2).merge(top_table.cell(1, 3))
-    top_table.cell(0, 2).text = safe_str(detail[13]) if detail else ""
-    # 实测力值
-    top_table.cell(0, 4).merge(top_table.cell(1, 5))
-    top_table.cell(0, 4).text = "实测力值\nActual load"
-    # Pmax/Pmin不合并
-    top_table.cell(0, 6).text = "Pmax"
-    top_table.cell(0, 7).text = "Pmin"
-    top_table.cell(1, 6).text = str(round(float(pmax) * 1000)) + "N" if detail else ""
-    top_table.cell(1, 7).text = str(round(float(pmin) * 1000)) + "N" if detail else ""
-    # 检验员
-    top_table.cell(0, 8).merge(top_table.cell(1, 9))
-    top_table.cell(0, 8).text = "批准人员"
-    # 陈广春
-    top_table.cell(0, 10).merge(top_table.cell(1, 11))
-    top_table.cell(0, 10).text = safe_str(detail[14]) if detail else ""
-    format_table_cells(top_table, font_size=10)
+    
+    table3.cell(0,0).merge(table3.cell(1,0))
+    table3.cell(0,1).merge(table3.cell(1,1))
+    table3.cell(0,2).merge(table3.cell(1,2))
+    table3.cell(0,3).merge(table3.cell(1,3))
+    table3.cell(0,4).merge(table3.cell(1,4))
+    table3.cell(2,0).merge(table3.cell(3,0))
+    table3.cell(2,1).merge(table3.cell(3,1))
+    table3.cell(2,2).merge(table3.cell(3,2))
+    table3.cell(2,3).merge(table3.cell(3,3))
+    table3.cell(2,4).merge(table3.cell(3,4))
+    _tr4 = table3.rows[4]
+    _tr4.cells[3].merge(_tr4.cells[4])
+    _tr4.cells[3].merge(_tr4.cells[4])
+    _tr5 = table3.rows[5]
+    _tr5.cells[1].merge(_tr5.cells[2])
+    _tr5.cells[1].merge(_tr5.cells[2])
+
+    # 第一行包括：整定载荷实测值(N)、载荷偏差度、弹簧刚度、理论值、实测值、刚度偏差
+    table3.cell(0,0).text = "整定载荷实测值(N)"
+    table3.cell(0,2).text = "载荷偏差度"
+    table3.cell(0,4).text = "弹簧刚度"
+    table3.cell(0,5).text = "理论值"
+    table3.cell(0,6).text = "实测值"
+    table3.cell(0,7).text = "刚度偏差"
+    # 第二行包括：最小位移(mm)、最小位移相应的实测载荷(N)、超载试验、超载试验值、超载起始-终止时间、超载保持时间
+    table3.cell(2,0).text = "最小位移(mm)"
+    table3.cell(2,2).text = "最小位移相应的实测载荷(N)"
+    table3.cell(2,4).text = "超载试验"
+    table3.cell(2,5).text = "超载试验值"
+    table3.cell(2,6).text = "超载起始-终止时间"
+    table3.cell(2,7).text = "超载保持时间"
+    # 第三行包括：最大位移(mm)、最大位移相应的实测载荷(N)、测试结论
+    table3.cell(4,0).text = "最大位移(mm)"
+    table3.cell(4,2).text = "最大位移相应的实测载荷(N)"
+    table3.cell(4,6).text = "测试结论"
+    # 第四行包括：试验人员、批准人员
+    table3.cell(5,0).text = "试验人员"
+    table3.cell(5,5).text = "批准人员"
+
+    # 弹簧刚度：库中仅 spring_stiffness 一列，理论值/实测值均填该值；刚度偏差暂无独立字段
+    # 超载相关：test_detail 无对应列，留空
+    if detail:
+        table3.rows[0].cells[1].text = safe_str(detail[15])
+        table3.rows[0].cells[3].text = safe_str(detail[16])
+        table3.rows[1].cells[5].text = safe_str(detail[12])
+        table3.rows[1].cells[6].text = safe_str(detail[12])
+        table3.rows[1].cells[7].text = ""
+        table3.rows[2].cells[1].text = safe_str(detail[17])
+        table3.rows[2].cells[3].text = safe_str(detail[18])
+        table3.rows[3].cells[5].text = ""
+        table3.rows[3].cells[6].text = ""
+        table3.rows[3].cells[7].text = ""
+        table3.rows[4].cells[1].text = safe_str(detail[19])
+        table3.rows[4].cells[3].text = safe_str(detail[20])
+        table3.rows[4].cells[7].text = safe_str(detail[21])
+        table3.rows[5].cells[1].text = safe_str(detail[13])
+        table3.rows[5].cells[6].text = safe_str(detail[14])
+    else:
+        table3.rows[0].cells[1].text = ""
+        table3.rows[0].cells[3].text = ""
+        table3.rows[1].cells[5].text = ""
+        table3.rows[1].cells[6].text = ""
+        table3.rows[1].cells[7].text = ""
+        table3.rows[2].cells[1].text = ""
+        table3.rows[2].cells[3].text = ""
+        table3.rows[3].cells[5].text = ""
+        table3.rows[3].cells[6].text = ""
+        table3.rows[3].cells[7].text = ""
+        table3.rows[4].cells[1].text = ""
+        table3.rows[4].cells[3].text = ""
+        table3.rows[4].cells[7].text = ""
+        table3.rows[5].cells[1].text = ""
+        table3.rows[5].cells[6].text = ""
+
+    format_table_cells(table3, font_size=10)
     # 设置这个表格的左右边加粗
-    set_table_border(top_table, left=True, right=True)
-
-    # 其余内容为一个2x6表格
-    main_table = doc.add_table(rows=2, cols=6)
-    main_table.style = 'Table Grid'
-    main_col_widths = [Inches(1.05), Inches(0.87), Inches(1.35), Inches(0.9), Inches(2.0), Inches(1.4)]
-    for i, width in enumerate(main_col_widths):
-        for row in main_table.rows:
-            row.cells[i].width = width
-    main_table.cell(0, 0).text = "最小位移\nMin travel"
-    main_table.cell(0, 1).text = safe_str(detail[17]) + "mm" if detail else ""
-    main_table.cell(0, 2).text = "最大位移\nMax travel"
-    main_table.cell(0, 3).text = safe_str(detail[19]) + "mm" if detail else ""
-    main_table.cell(0, 4).text = "整定载荷实测值\nActual set load"
-    main_table.cell(0, 5).text = safe_str(detail[15]) + "N" if detail else ""
-
-    main_table.cell(1, 0).text = "最小位移实测载荷\nMin travel load"
-    main_table.cell(1, 1).text = safe_str(detail[18]) + "N" if detail else ""
-    main_table.cell(1, 2).text = "最大位移实测载荷\nMax travel load"
-    main_table.cell(1, 3).text = safe_str(detail[20]) + "N" if detail else ""
-    main_table.cell(1, 4).text = "载荷偏差度\nLoad deviation"
-    main_table.cell(1, 5).text = safe_str(detail[16]) if detail else ""
-    format_table_cells(main_table, font_size=10)
-    # 设置这个表格的左右边加粗
-    set_table_border(main_table, left=True, right=True)
-
-    # 最后一个1行的表格，4个内容（自动适应页面宽度与上方表格一致）
-    bottom_table = doc.add_table(rows=1, cols=8)
-    bottom_table.style = 'Table Grid'
-    bottom_col_widths = [Inches(1.1), Inches(0.795), Inches(1.5), Inches(0.425), Inches(1.1), Inches(0.625), Inches(1.5), Inches(0.325)]
-    for i, width in enumerate(bottom_col_widths):
-        bottom_table.cell(0, i).width = width
-    bottom_table.cell(0, 0).text = "螺纹尺寸\nThread size"
-    bottom_table.cell(0, 1).text = safe_str(detail[11]) if detail else ""
-    bottom_table.cell(0, 2).text = "弹簧刚度\nSpring stiffness"
-    bottom_table.cell(0, 3).text = safe_str(detail[12]) if detail else ""
-    bottom_table.cell(0, 4).text = "测试结论\nConclusion"
-    bottom_table.cell(0, 5).text = safe_str(detail[21]) if detail else ""
-    bottom_table.cell(0, 6).text = ""
-    bottom_table.cell(0, 7).text = ""
-    format_table_cells(bottom_table, font_size=10)
-    # 设置最后一个表格的下边和左右边加粗
-    set_table_border(bottom_table, bottom=True, left=True, right=True)
+    set_table_border(table3, left=True, right=True)
 
     doc.save(full_path)
 

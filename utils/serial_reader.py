@@ -1,5 +1,6 @@
 import sys
 import time
+import math
 from random import random
 
 import serial
@@ -163,7 +164,7 @@ class SerialReader(QObject):
             try:
                 if i <= 800:
                     y += 1
-                    x = uniform(23.2, 60.6) 
+                    x = uniform(10, 11) * math.log(y*10,2)
                 
                 data = f"({x}, {y}, 18432)"
                 print("send data:", data, self._sending_data)

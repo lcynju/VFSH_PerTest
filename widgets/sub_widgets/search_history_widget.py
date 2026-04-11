@@ -35,14 +35,6 @@ class SearchHistoryWidget(QWidget):
         row2.addWidget(self.year_box)
         layout.addLayout(row2)
 
-        # 复选框：全部数据 / 自动隐藏
-        # row3 = QHBoxLayout()
-        # self.checkbox_all = QCheckBox("全部数据")
-        # self.checkbox_auto_hide = QCheckBox("自动隐藏")
-        # row3.addWidget(self.checkbox_all)
-        # row3.addWidget(self.checkbox_auto_hide)
-        # layout.addLayout(row3)
-
         # 查询框（例如筛选框）
         self.search_box = QLineEdit()
         self.search_box.setPlaceholderText("输入用户或者出厂编号")
@@ -56,15 +48,6 @@ class SearchHistoryWidget(QWidget):
         # 连接单元格点击信号以处理链接点击
         self.table.cellClicked.connect(self.handle_cell_click)
         layout.addWidget(self.table)
-
-        # # 删除按钮 + 输出标记复选框
-        # row4 = QHBoxLayout()
-        # self.delete_button = QPushButton("删除")
-        # self.delete_button.setEnabled(False)
-        # self.mark_checkbox = QCheckBox("输出标记")
-        # row4.addWidget(self.delete_button)
-        # row4.addWidget(self.mark_checkbox)
-        # layout.addLayout(row4)
 
         # 搜索框回车触发搜索
         self.search_box.returnPressed.connect(self.handle_search)
@@ -208,10 +191,6 @@ class SearchHistoryWidget(QWidget):
                 # 查询该ID的测试数据
                 x_list, y_list, highlight = DataManager.queryTestDataByFormId(int(data_id))
                 
-                # 显示导入成功的提示
-                from PyQt5.QtWidgets import QMessageBox
-                QMessageBox.information(self, "导入成功", f"已成功导入ID为{data_id}的数据")
-                
                 # 这里需要将数据传递给chart_widget1
                 # 如果能够获取到main_window的引用，可以直接调用chart_widget1的方法
                 if self.main_window and hasattr(self.main_window, 'chart_widget1'):
@@ -262,23 +241,22 @@ class SearchHistoryWidget(QWidget):
 
                         # 传入导入数据的文件路径，便于直接打印文件
                         test_widget._existing_file_path = detail_data[22]
-                    
-                    if (detail_data is not None) and (detail_data[22] is None):
-                        test_widget._record_dot_x = x_list
-                        test_widget._record_dot_y = y_list
-                        test_widget._record_dot_highlight = highlight
-                        test_widget.save_high_res_chart()
-                        
-                    # 更新图表数据
-                    if hasattr(test_widget, 'rewrite_chart'):
-                        test_widget.rewrite_chart(x_list, y_list, highlight)
-                        
-                    # 设置当前处理的数据ID，便于后续打印
-                    self.main_window.now_handle_data_id = int(data_id)
-                    # 导入的是已有数据，禁用测试入库按钮并标记为已入库
-                    test_widget.mark_as_saved()
-                    # 导入后禁用开始按钮，需点击清空面板后再启用
-                    test_widget.wz_zero_btn.setEnabled(False)
+                        test_widget._recorded_x_values = x_list
+                        test_widget._recorded_y_values = y_list
+                        test_widget._recorded_highlight = highlight
+                        test_widget.rewrite_chart()
+                        if detail_data[22] is None:
+                            test_widget.save_high_res_chart()
+                        # 设置当前处理的数据ID，便于后续打印
+                        self.main_window.now_handle_data_id = int(data_id)
+                        # 导入的是已有数据，禁用测试入库按钮并标记为已入库
+                        test_widget.mark_as_saved()
+                        # 导入后禁用开始按钮，需点击清空面板后再启用
+                        test_widget.zz_zero_btn.setEnabled(False)
+
+                        # 显示导入成功的提示
+                        from PyQt5.QtWidgets import QMessageBox
+                        QMessageBox.information(self.main_window, "导入成功", f"已成功导入ID为{data_id}的数据")
 
             except Exception as e:
                 # print(f"导入数据时出错: {e}")
